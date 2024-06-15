@@ -3,23 +3,24 @@ module.exports = {
     'main',
     {
       name: 'develop',
-      prerelease: true,
+      prerelease: 'beta',
     },
   ],
+  tagFormat: 'v${version}',
   plugins: [
     '@semantic-release/commit-analyzer',
+    [
+      '@semantic-release/exec',
+      {
+        verifyReleaseCmd:
+          'echo "NEXT_RELEASE_VERSION=${nextRelease.version}" >> $GITHUB_ENV',
+      },
+    ],
     '@semantic-release/release-notes-generator',
     [
       '@semantic-release/changelog',
       {
         changelogFile: 'CHANGELOG.md',
-      },
-    ],
-    [
-      '@semantic-release/npm',
-      {
-        npmPublish: true,
-        tarballDir: 'dist',
       },
     ],
     [
@@ -30,11 +31,5 @@ module.exports = {
           'chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
-    // [
-    // 	'@semantic-release/github',
-    // 	{
-    // 		assets: [{ path: 'dist/**' }],
-    // 	},
-    // ],
   ],
 };
