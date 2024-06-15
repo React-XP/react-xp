@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./src/package/theme
+        working-directory: src/package/theme
     strategy:
       matrix:
         node-version: [20]
