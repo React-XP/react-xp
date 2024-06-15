@@ -60,7 +60,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish --no-git-checks --access public --tag develop
+        run: npm publish --no-git-checks --access public --tag develop
       # </Core package>
 
       # <Theme package>
@@ -82,7 +82,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish --no-git-checks --access public --tag develop
+        run: npm publish --no-git-checks --access public --tag develop
       # </Theme package>
 
       # <Ui package>
@@ -104,5 +104,5 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm publish --no-git-checks --access public --tag develop
+        run: npm publish --no-git-checks --access public --tag develop
       # </Ui package>
