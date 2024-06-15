@@ -1,5 +1,4 @@
 {
-  "extends": "../../../tsconfig.paths.json",
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist",
@@ -13,7 +12,9 @@
     "isolatedModules": true,
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
-    "useDefineForClassFields": true
+    "useDefineForClassFields": true,
+    "composite": true,
+    "declaration": true
   },
   "include": ["src"]
 }

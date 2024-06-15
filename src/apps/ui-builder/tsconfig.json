@@ -1,9 +1,6 @@
 {
-  "extends": "../../../tsconfig.paths.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "dist",
-    "rootDir": "src",
     "target": "ES2020",
     "lib": ["DOM", "ES2020"],
     "module": "ESNext",
@@ -14,18 +11,29 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
-    "composite": true
-  },
-  "include": ["src"],
-  "references": [
-    {
-      "path": "../../packages/core"
-    },
-    {
-      "path": "../../packages/theme"
-    },
-    {
-      "path": "../../packages/ui"
+    "paths": {
+      "@react-xp/core/*": [
+        "../../packages/core/src/components/*",
+        "../../packages/core/src/contexts/*",
+        "../../packages/core/src/hooks/*",
+        "../../packages/core/src/providers/*",
+        "../../packages/core/src/types/*"
+      ],
+      "@react-xp/theme/*": [
+        "../../packages/theme/src/components/*",
+        "../../packages/theme/src/contexts/*",
+        "../../packages/theme/src/hooks/*",
+        "../../packages/theme/src/providers/*",
+        "../../packages/theme/src/types/*"
+      ],
+      "@react-xp/ui/*": [
+        "../../packages/ui/src/components/*",
+        "../../packages/ui/src/contexts/*",
+        "../../packages/ui/src/hooks/*",
+        "../../packages/ui/src/providers/*",
+        "../../packages/ui/src/types/*"
+      ]
     }
-  ]
+  },
+  "include": ["src"]
 }
