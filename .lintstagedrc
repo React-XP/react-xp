@@ -1,0 +1,9 @@
+{
+  "./src/{apps|packages}/*/src/**/*": ["cspell"],
+  "./src/{apps|packages}/*/src/**/*.{js,jsx,ts,tsx}": [
+    "biome format --write",
+    "biome check --write",
+    "stylelint"
+  ],
+  "./src/{apps|packages}/*/src/**/*.{css,scss}": ["stylelint"]
+}

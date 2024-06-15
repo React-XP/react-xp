@@ -1,0 +1,32 @@
+{
+  "name": "@react-xp/core",
+  "private": true,
+  "version": "1.0.0",
+  "exports": {
+    "./box": {
+      "source": "./src/components/box/index.ts",
+      "default": "./dist/components/box/index.js"
+    },
+    "./useHook": {
+      "source": "./src/hooks/useHook/index.ts",
+      "default": "./dist/hooks/useHook/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "check": "biome check --write",
+    "dev": "rimraf dist && tsc --watch",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.2"
+  }
+}
