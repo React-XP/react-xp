@@ -59,6 +59,7 @@ jobs:
         working-directory: ./src/packages/core
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --no-git-checks --access public --tag develop
       # </Core package>
 
@@ -80,6 +81,7 @@ jobs:
         working-directory: ./src/packages/theme
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --no-git-checks --access public --tag develop
       # </Theme package>
 
@@ -101,5 +103,6 @@ jobs:
         working-directory: ./src/packages/ui
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpm publish --no-git-checks --access public --tag develop
       # </Ui package>
