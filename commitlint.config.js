@@ -16,7 +16,6 @@ module.exports = {
         'revert',
         'style',
         'test',
-        'release',
         'BREAKING CHANGE',
       ],
     ],
@@ -24,7 +23,8 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['global', 'docs', 'showcase', 'ui-builder', 'theme', 'ui'],
+      ['global', 'docs', 'showcase', 'ui-builder', 'theme', 'ui', 'release'],
     ],
+    'body-max-line-length': [0, 'never'],
   },
 };

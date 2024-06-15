@@ -23,7 +23,7 @@
     "prettier-format-all": "prettier --write src/**/*.{json,ts,tsx}",
     "lint:all": "yarn run lint:errors && yarn run spell:check && yarn run lint:css",
     "spell:check": "cspell src/**/*.{ts,tsx}",
-    "git:pre-commit": "lint-staged --no-stash --allow-empty",
+    "git:pre-commit": "lint-staged --no-stash",
     "git:pre-push": "yarn run build && yarn run test:coverage"
   },
   "private": true,
