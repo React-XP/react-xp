@@ -3,11 +3,7 @@ module.exports = {
     'main',
     {
       name: 'develop',
-      prerelease: true,
-    },
-    {
-      name: 'feature/*',
-      prerelease: true,
+      prerelease: 'rc',
     },
   ],
   plugins: [
@@ -34,11 +30,11 @@ module.exports = {
           'chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
-    // [
-    //   '@semantic-release/github',
-    //   {
-    //     assets: [{ path: 'dist/**' }],
-    //   },
-    // ],
+    [
+      '@semantic-release/github',
+      {
+        assets: [{ path: 'dist/**' }],
+      },
+    ],
   ],
 };
