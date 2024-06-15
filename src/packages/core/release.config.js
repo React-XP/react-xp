@@ -15,13 +15,13 @@ module.exports = {
         changelogFile: 'CHANGELOG.md',
       },
     ],
-    [
-      '@semantic-release/npm',
-      {
-        npmPublish: true,
-        tarballDir: 'dist',
-      },
-    ],
+    // [
+    //   '@semantic-release/npm',
+    //   {
+    //     npmPublish: true,
+    //     tarballDir: 'dist',
+    //   },
+    // ],
     [
       '@semantic-release/git',
       {
