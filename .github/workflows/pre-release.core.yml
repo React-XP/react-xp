@@ -9,9 +9,9 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: ./src/package/core
+    defaults:
+      run:
+        working-directory: ./src/packages/core
     strategy:
       matrix:
         node-version: [20]
