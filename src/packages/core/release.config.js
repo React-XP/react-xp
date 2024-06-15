@@ -5,6 +5,10 @@ module.exports = {
       name: 'develop',
       prerelease: true,
     },
+    {
+      name: 'feature/*',
+      prerelease: true,
+    },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
