@@ -1,4 +1,4 @@
-name: Release package theme
+name: Pre-release package theme
 on:
   workflow_dispatch:
   push:

@@ -1,4 +1,4 @@
-name: Release package ui
+name: Pre-release package ui
 on:
   workflow_dispatch:
   push:

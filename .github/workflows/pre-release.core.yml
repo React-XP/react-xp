@@ -1,4 +1,4 @@
-name: Release package core
+name: Pre-release package core
 on:
   workflow_dispatch:
   push:
