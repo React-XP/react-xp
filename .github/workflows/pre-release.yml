@@ -1,0 +1,60 @@
+name: Pre-release package
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      # - name: Run tests
+      #   run: pnpm run test
+
+      - name: Run build core
+        working-directory: ./src/packages/core
+        run: pnpm run build
+      - name: Release core
+        working-directory: ./src/packages/core
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpx semantic-release --debug
+
+      - name: Run build theme
+        working-directory: ./src/packages/theme
+        run: pnpm run build
+      - name: Release theme
+        working-directory: ./src/packages/theme
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpx semantic-release --debug
+
+      - name: Run build ui
+        working-directory: ./src/packages/ui
+        run: pnpm run build
+      - name: Release ui
+        working-directory: ./src/packages/ui
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpx semantic-release --debug
