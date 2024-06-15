@@ -15,11 +15,19 @@ module.exports = {
         changelogFile: 'CHANGELOG.md',
       },
     ],
+    // [
+    //   '@semantic-release/npm',
+    //   {
+    //     npmPublish: true,
+    //     tarballDir: 'dist',
+    //   },
+    // ],
     [
-      '@semantic-release/npm',
+      '@glzr/semantic-release-npm',
       {
         npmPublish: true,
         tarballDir: 'dist',
+        packageManager: 'pnpm',
       },
     ],
     [
