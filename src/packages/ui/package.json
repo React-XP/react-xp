@@ -19,8 +19,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
-    "@react-xp/core": "workspace:*",
-    "@react-xp/theme": "workspace:*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "rimraf": "^5.0.7",
@@ -32,9 +30,5 @@
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.0",
     "typescript": "^5.4.2"
-  },
-  "peerDependencies": {
-    "@react-xp/core": "*",
-    "@react-xp/theme": "*"
   }
 }
