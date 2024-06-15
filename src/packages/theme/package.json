@@ -1,6 +1,9 @@
 {
   "name": "@react-xp/theme",
   "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     "./themeProvider": {
       "source": "./src/providers/themeProvider/themeProvider.ts",
@@ -17,7 +20,7 @@
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -30,6 +33,8 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^10.0.6",
     "@semantic-release/release-notes-generator": "^14.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rimraf": "^5.0.7",
     "semantic-release": "^24.0.0",
     "semantic-release-pnpm": "^1.0.2",
