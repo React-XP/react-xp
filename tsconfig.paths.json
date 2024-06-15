@@ -1,21 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@react-xp/core/box": ["../../packages/core/src/components/box/box.tsx"],
-      "@react-xp/core/useHook": [
-        "../../packages/core/src/hooks/useHook/useHook.tsx"
-      ]
+      "@/*": ["./src/*"]
     }
-  },
-  "references": [
-    {
-      "path": "../../packages/core"
-    },
-    {
-      "path": "../../packages/theme"
-    },
-    {
-      "path": "../../packages/ui"
-    }
-  ]
+  }
 }

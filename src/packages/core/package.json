@@ -1,19 +1,18 @@
 {
   "name": "@react-xp/core",
-  "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "exports": {
-    "./box": {
-      "source": "./src/components/box/index.ts",
-      "default": "./dist/components/box/index.js"
+    "./useDidMount": {
+      "source": "./src/hooks/useDidMount/useDidMount.ts",
+      "default": "./dist/hooks/useDidMount/useDidMount.js"
     },
-    "./useHook": {
-      "source": "./src/hooks/useHook/index.ts",
-      "default": "./dist/hooks/useHook/index.js"
+    "./useDidUnmount": {
+      "source": "./src/hooks/useDidUnmount/useDidUnmount.ts",
+      "default": "./dist/hooks/useDidUnmount/useDidUnmount.js"
     }
   },
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc --project tsconfig.build.json",
     "check": "biome check --write",
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"

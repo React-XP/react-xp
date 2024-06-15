@@ -1,7 +1,6 @@
 {
   "name": "@react-xp/showcase",
-  "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "scripts": {
     "build": "rsbuild build",
     "check": "biome check --write",
@@ -11,6 +10,8 @@
   },
   "dependencies": {
     "@react-xp/core": "workspace:*",
+    "@react-xp/theme": "workspace:*",
+    "@react-xp/ui": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
