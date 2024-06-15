@@ -57,7 +57,7 @@ jobs:
 
       - name: Publish
         working-directory: ./src/packages/core
-        run: pnpm publish --provenance --access public
+        run: pnpm publish --provenance --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # </Core package>
@@ -78,7 +78,7 @@ jobs:
 
       - name: Publish
         working-directory: ./src/packages/theme
-        run: pnpm publish --provenance --access public
+        run: pnpm publish --provenance --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # </Theme package>
@@ -99,7 +99,7 @@ jobs:
 
       - name: Publish
         working-directory: ./src/packages/ui
-        run: pnpm publish --provenance --access public
+        run: pnpm publish --provenance --no-git-checks --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       # </Ui package>
