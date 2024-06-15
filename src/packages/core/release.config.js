@@ -23,6 +23,14 @@ module.exports = {
     //   },
     // ],
     [
+      '@glzr/semantic-release-npm',
+      {
+        npmPublish: true,
+        tarballDir: 'dist',
+        packageManager: 'pnpm',
+      },
+    ],
+    [
       '@semantic-release/git',
       {
         assets: ['CHANGELOG.md'],
