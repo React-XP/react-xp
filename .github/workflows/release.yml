@@ -1,4 +1,4 @@
-name: Release package
+name: Release packages
 on:
   workflow_dispatch:
   push:
