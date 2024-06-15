@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2024-06-15)
+
+
+### Features
+
+* **global:** test ([693dbef](https://github.com/React-XP/react-xp/commit/693dbef897776d457672051590ed47ef94c379fe))
+
 # 1.0.0-beta.1 (2024-06-15)
 
 
