@@ -3,11 +3,7 @@ module.exports = {
     'main',
     {
       name: 'develop',
-      prerelease: true,
-    },
-    {
-      name: 'feature/*',
-      prerelease: true,
+      prerelease: 'rc',
     },
   ],
   plugins: [
