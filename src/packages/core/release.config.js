@@ -6,6 +6,7 @@ module.exports = {
       prerelease: 'beta',
     },
   ],
+  tagFormat: 'core-${version}',
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -38,11 +39,11 @@ module.exports = {
           'chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
-    // [
-    //   '@semantic-release/github',
-    //   {
-    //     assets: [{ path: 'dist/**' }],
-    //   },
-    // ],
+    [
+      '@semantic-release/github',
+      {
+        assets: [{ path: 'dist/**' }],
+      },
+    ],
   ],
 };
