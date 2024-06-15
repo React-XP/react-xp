@@ -13,7 +13,8 @@
     "truetype",
     "flexbox",
     "Antd",
-    "flexboxgrid"
+    "flexboxgrid",
+    "Avenir"
   ],
   "flagWords": [],
   "ignorePaths": [

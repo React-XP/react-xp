@@ -100,11 +100,17 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
-  src/apps/showcase:
+  src/apps/docs:
     dependencies:
       '@react-xp/core':
         specifier: workspace:*
         version: link:../../packages/core
+      '@react-xp/theme':
+        specifier: workspace:*
+        version: link:../../packages/theme
+      '@react-xp/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -199,6 +205,9 @@ importers:
       '@biomejs/biome':
         specifier: ^1.8.0
         version: 1.8.1
+      '@react-xp/core':
+        specifier: workspace:*
+        version: link:../core
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
@@ -224,6 +233,12 @@ importers:
       '@biomejs/biome':
         specifier: ^1.8.0
         version: 1.8.1
+      '@react-xp/core':
+        specifier: workspace:*
+        version: link:../core
+      '@react-xp/theme':
+        specifier: workspace:*
+        version: link:../theme
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3

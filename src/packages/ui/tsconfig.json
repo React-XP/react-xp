@@ -1,7 +1,9 @@
 {
   "extends": "../../../tsconfig.paths.json",
   "compilerOptions": {
-    "outDir": "dist",
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "target": "ES2020",
     "lib": ["DOM", "ES2020"],
     "module": "ESNext",

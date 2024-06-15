@@ -2,8 +2,8 @@
   "extends": "../../../tsconfig.paths.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "dist",
-    "rootDir": "src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "target": "ES2020",
     "lib": ["DOM", "ES2020"],
     "module": "ESNext",
@@ -14,18 +14,7 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
-    "composite": true
+    "declaration": true
   },
-  "include": ["src"],
-  "references": [
-    {
-      "path": "../../packages/core"
-    },
-    {
-      "path": "../../packages/theme"
-    },
-    {
-      "path": "../../packages/ui"
-    }
-  ]
+  "include": ["src"]
 }

@@ -1,10 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules/
-build/
-coverage/
-dist/
+node_modules
+build
+coverage
+dist
 /.pnp
 .pnp.js
 *debug*
@@ -32,12 +32,18 @@ src/react-app-env.d.ts
 /.scannerwork
 test-report.xml
 
-/src/packages/*/node_modules/
-/src/packages/*/build/
-/src/packages/*/coverage/
-/src/packages/*/dist/
+/src/apps/*/node_modules
+/src/apps/*/build
+/src/apps/*/coverage
+/src/apps/*/dist
+
+/src/packages/*/node_modules
+/src/packages/*/build
+/src/packages/*/coverage
+/src/packages/*/dist
+
+*.tsbuildinfo
 
 /storybook-static
-!/src/packages/core/src/components/**/*
 
 /docs

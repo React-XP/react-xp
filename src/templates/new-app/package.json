@@ -1,7 +1,6 @@
 {
-  "name": "@react-xp/showcase",
-  "private": true,
-  "version": "1.0.0",
+  "name": "@react-xp/new-app-name",
+  "version": "0.0.0",
   "scripts": {
     "build": "rsbuild build",
     "check": "biome check --write",

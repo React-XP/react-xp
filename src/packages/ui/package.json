@@ -1,15 +1,14 @@
 {
   "name": "@react-xp/ui",
-  "private": true,
-  "version": "1.0.0",
+  "version": "0.0.0",
   "exports": {
-    "./button": {
-      "source": "./src/components/button/index.ts",
-      "default": "./dist/components/button/index.js"
+    "./box": {
+      "source": "./src/components/box/box.tsx",
+      "default": "./dist/components/box/box.js"
     }
   },
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc --project tsconfig.build.json",
     "check": "biome check --write",
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"
@@ -20,9 +19,15 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
+    "@react-xp/core": "workspace:*",
+    "@react-xp/theme": "workspace:*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "rimraf": "^5.0.7",
     "typescript": "^5.4.2"
+  },
+  "peerDependencies": {
+    "@react-xp/core": "*",
+    "@react-xp/theme": "*"
   }
 }
