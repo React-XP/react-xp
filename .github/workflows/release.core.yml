@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '20.00'
+          node-version: '20'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Run tests
