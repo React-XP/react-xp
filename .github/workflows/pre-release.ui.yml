@@ -8,21 +8,31 @@ on:
       - src/packages/ui/*
 jobs:
   release:
-    name: Pre-release
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/packages/ui
+    strategy:
+      matrix:
+        node-version: [20]
     steps:
       - name: Checkout
-        uses: pnpm/actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node.js
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       # - name: Run tests
-      # run: pnpm run test
+      #   run: pnpm run test
       - name: Run build
         run: pnpm run build
       - name: Release
