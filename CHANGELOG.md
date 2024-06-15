@@ -1,3 +1,10 @@
+# [1.0.0-beta.5](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2024-06-15)
+
+
+### Bug Fixes
+
+* **global:** test publish v3 ([50aa69d](https://github.com/React-XP/react-xp/commit/50aa69dbe068087ad90e6f6c2f36af5e99a6fc77))
+
 # [1.0.0-beta.4](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2024-06-15)
 
 
