@@ -1,3 +1,11 @@
+# [1.0.0-beta.2](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2024-06-15)
+
+
+### Bug Fixes
+
+* **global:** fixed naming of github workflows ([bfda062](https://github.com/React-XP/react-xp/commit/bfda0624054c82b8943f4cb0efc5f41cf4635d79))
+* **global:** try fixed build and publish for all packages ([cde9eef](https://github.com/React-XP/react-xp/commit/cde9eef70af6f1cc35aec84bb6dae758f8f7dad7))
+
 # 1.0.0-rc.1 (2024-06-15)
 
 
