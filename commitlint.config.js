@@ -1,9 +1,28 @@
 module.exports = {
-  extends: [
-    '@commitlint/config-conventional',
-    '@commitlint/config-lerna-scopes',
-  ],
+  extends: ['@commitlint/config-conventional'],
   rules: {
-    'scope-empty': 'never',
+    'type-enum': [
+      2,
+      'always',
+      [
+        'build',
+        'chore',
+        'ci',
+        'docs',
+        'feat',
+        'fix',
+        'perf',
+        'refactor',
+        'revert',
+        'style',
+        'test',
+        'BREAKING CHANGE',
+      ],
+    ],
+    'scope-enum': [
+      2,
+      'always',
+      ['global', 'docs', 'showcase', 'ui-builder', 'theme', 'ui'],
+    ],
   },
 };
