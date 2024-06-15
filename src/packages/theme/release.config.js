@@ -38,11 +38,11 @@ module.exports = {
           'chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
-    [
-      '@semantic-release/github',
-      {
-        assets: [{ path: 'dist/**', name: 'theme', label: 'theme' }],
-      },
-    ],
+    // [
+    //   '@semantic-release/github',
+    //   {
+    //     assets: [{ path: 'dist/**' }],
+    //   },
+    // ],
   ],
 };
