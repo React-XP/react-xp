@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ../src/package/ui
+        working-directory: ./src/package/ui
     strategy:
       matrix:
         node-version: [20]
