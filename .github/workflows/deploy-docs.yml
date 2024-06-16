@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - develop
+    paths:
+      - src/apps/docs/*
 jobs:
   release:
     runs-on: ubuntu-latest

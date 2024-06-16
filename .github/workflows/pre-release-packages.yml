@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - develop
+    paths:
+      - src/packages/core/*
+      - src/packages/theme/*
+      - src/packages/ui/*
 jobs:
   release:
     runs-on: ubuntu-latest
