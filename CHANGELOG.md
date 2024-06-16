@@ -1,3 +1,15 @@
+# [1.0.0-beta.14](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2024-06-16)
+
+
+### Bug Fixes
+
+* **docs:** fixed button in docs ([f957e4c](https://github.com/React-XP/react-xp/commit/f957e4c030e120d2a5321da098e332f2adf0e205))
+
+
+### Features
+
+* **global:** stable version of monorepo with ci ([1ea5719](https://github.com/React-XP/react-xp/commit/1ea57199c916c1f10fe62e027068f7a370c34be6))
+
 # [1.0.0-beta.13](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2024-06-16)
 
 
