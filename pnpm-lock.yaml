@@ -98,6 +98,15 @@ importers:
 
   src/apps/docs:
     dependencies:
+      '@react-xp/core':
+        specifier: 1.0.0-beta.10
+        version: 1.0.0-beta.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-xp/theme':
+        specifier: 1.0.0-beta.10
+        version: 1.0.0-beta.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-xp/ui':
+        specifier: 1.0.0-beta.10
+        version: 1.0.0-beta.10(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -1038,6 +1047,24 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
+
+  '@react-xp/core@1.0.0-beta.10':
+    resolution: {integrity: sha512-eDfoPfTH9GcHkpL1+FXqtQJJJmsHBdT/lWDTmirCMBJQFUFXOWPHg1pQA+0ZXXd0QgUH1kGfJt8l/jJGZyz8LQ==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+
+  '@react-xp/theme@1.0.0-beta.10':
+    resolution: {integrity: sha512-W54ixI+tl6f1frFAxK4HmvVLVrsv9BOheDQ5rzQgVjXuC0VxGgbgXghvFbVsNJw96zfgTFvGHi+ASj1+l+dRGg==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
+
+  '@react-xp/ui@1.0.0-beta.10':
+    resolution: {integrity: sha512-8upqG4BpZTiRk08WFLkr9dQlUAvMGHgVzBTrs3BgTGcBGk0ysRnpz7KtJm/BE6/RQ5eDvqM0Hsm6HenEbs337w==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+      react-dom: ^17.0.0 || ^18.0.0
 
   '@rsbuild/core@0.7.7':
     resolution: {integrity: sha512-thalodQRNOHk8G05CsdPm07GJKxmwTLeVYNIx1UKH7fFr7z/gsLsxIikez0tErY3SEBbQuFWFC+bYdX6dduVxw==}
@@ -5777,6 +5804,27 @@ snapshots:
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.3
+
+  '@react-xp/core@1.0.0-beta.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      class-variance-authority: 0.7.0
+      clsx: 2.1.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      tailwind-merge: 2.3.0
+
+  '@react-xp/theme@1.0.0-beta.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+
+  '@react-xp/ui@1.0.0-beta.10(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.0.2(@types/react@18.3.3)(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
 
   '@rsbuild/core@0.7.7':
     dependencies:
