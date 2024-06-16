@@ -11,7 +11,7 @@ export default defineConfig({
   html: {
     template: './static/index.html',
     templateParameters: {
-      baseHref: process.env.BASE_HREF || '/',
+      baseHref: process.env.BASE_HREF || 'https://react-xp.github.io/react-xp/',
     },
   },
   plugins: [pluginReact(), pluginSourceBuild()],
