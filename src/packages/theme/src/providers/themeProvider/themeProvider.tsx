@@ -1,5 +1,5 @@
 import type React from 'react';
-import { ThemeContext } from 'src/contexts/themeContext';
+import { ThemeContext } from '../../contexts/themeContext';
 
 interface ThemeProviderProps {
   theme: 'light' | 'dark';
