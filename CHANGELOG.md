@@ -1,3 +1,11 @@
+# [1.0.0-beta.12](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2024-06-16)
+
+
+### Bug Fixes
+
+* **global:** fixed build release of packages ([d2ba99e](https://github.com/React-XP/react-xp/commit/d2ba99e3edfe799242b27c4549f5ba0abda9fe76))
+* **global:** fixed package lock ([a4e9232](https://github.com/React-XP/react-xp/commit/a4e923219070ec6784a654aaeb05afc4925a595e))
+
 # [1.0.0-beta.11](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2024-06-16)
 
 
