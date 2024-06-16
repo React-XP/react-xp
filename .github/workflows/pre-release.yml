@@ -32,7 +32,7 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: pnpx semantic-release --debug
+        run: pnpx semantic-release
 
       - name: Nothing to release
         if: ${{ env.NEXT_RELEASE_VERSION == '' }}
@@ -64,7 +64,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --no-git-checks --access public --tag develop
+        run: pnpm publish --no-git-checks --access public --tag latest
       # </Core package>
 
       # <Theme package>
@@ -86,7 +86,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --no-git-checks --access public --tag develop
+        run: pnpm publish --no-git-checks --access public --tag latest
       # </Theme package>
 
       # <Ui package>
@@ -108,5 +108,5 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --no-git-checks --access public --tag develop
+        run: pnpm publish --no-git-checks --access public --tag latest
       # </Ui package>
