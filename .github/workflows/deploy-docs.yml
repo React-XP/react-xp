@@ -39,6 +39,10 @@ jobs:
         working-directory: ./src/packages/ui
         run: pnpm run build
 
+      - name: Set up .env
+        run: |
+          echo 'BASE_HREF=https://react-xp.github.io/react-xp/' > .env
+
       - name: Build docs
         working-directory: ./src/apps/docs
         run: pnpm run build

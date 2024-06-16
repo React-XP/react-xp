@@ -11,8 +11,7 @@ const App = () => {
   return (
     <ThemeProvider theme="light">
       <div className="content">
-        <h1>Rsbuild with React</h1>
-        <p>Start building amazing things with Rsbuild.</p>
+        <h1>🚀 React XP - Docs</h1>
         <Box />
       </div>
     </ThemeProvider>
