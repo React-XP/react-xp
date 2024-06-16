@@ -1,3 +1,10 @@
+# [1.0.0-beta.8](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2024-06-16)
+
+
+### Features
+
+* **global:** fixed ci ([6876944](https://github.com/React-XP/react-xp/commit/6876944f61568dbf0f2bbd5d6b3ea9bf69484268))
+
 # [1.0.0-beta.7](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2024-06-16)
 
 
