@@ -1,3 +1,10 @@
+# [1.0.0-beta.13](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.12...v1.0.0-beta.13) (2024-06-16)
+
+
+### Bug Fixes
+
+* **ui:** fixed export button in package json ([ac08c3a](https://github.com/React-XP/react-xp/commit/ac08c3a0d0d3217f086fed5d5b8a9374f0dcd52d))
+
 # [1.0.0-beta.12](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.11...v1.0.0-beta.12) (2024-06-16)
 
 
