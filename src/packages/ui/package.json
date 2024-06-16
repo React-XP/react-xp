@@ -10,8 +10,12 @@
   ],
   "exports": {
     "./box": {
-      "source": "./src/components/box/box.tsx",
-      "default": "./dist/components/box/box.js"
+      "source": "./src/components/box/index.tsx",
+      "default": "./dist/components/box/index.js"
+    },
+    "./button": {
+      "source": "./src/components/button/index.tsx",
+      "default": "./dist/components/button/index.js"
     }
   },
   "scripts": {

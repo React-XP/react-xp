@@ -5,7 +5,7 @@ module.exports = {
   darkMode: ['class'],
   content: [
     './src/**/*.{html,tsx}',
-    './node_modules/@react-xp/**/*.{html,tsx}',
+    './node_modules/@react-xp/**/*.{html,js}',
     '../../packages/*/src/**/*.{html,tsx}',
   ],
   theme: {
