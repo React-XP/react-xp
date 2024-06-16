@@ -41,6 +41,10 @@ jobs:
           script: |
             core.setFailed('Nothing to release')
 
+      - name: Set up .npmrc
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}' > .npmrc
+
       # <Core package>
       - name: update package.json version
         uses: jaywcjlove/github-action-package@main
