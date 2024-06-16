@@ -9,13 +9,17 @@
     "dist/"
   ],
   "exports": {
-    "./themeProvider": {
-      "source": "./src/providers/themeProvider/themeProvider.ts",
-      "default": "./dist/providers/themeProvider/themeProvider.js"
-    },
     "./useTheme": {
-      "source": "./src/hooks/useTheme/useTheme.ts",
-      "default": "./dist/hooks/useTheme/useTheme.js"
+      "source": "./src/hooks/useTheme/index.ts",
+      "default": "./dist/hooks/useTheme/index.js"
+    },
+    "./tailwind": {
+      "source": "./src/modules/tailwind/index.ts",
+      "default": "./dist/modules/tailwind/index.js"
+    },
+    "./themeProvider": {
+      "source": "./src/providers/themeProvider/index.ts",
+      "default": "./dist/providers/themeProvider/index.js"
     }
   },
   "scripts": {
@@ -43,6 +47,8 @@
     "react-dom": "^18.3.1",
     "rimraf": "^5.0.7",
     "semantic-release": "^24.0.0",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.2"
   },
   "keywords": [

@@ -1,6 +1,5 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
-import { pluginSourceBuild } from '@rsbuild/plugin-source-build';
 
 console.log('process.env', JSON.stringify(process.env.BASE_HREF));
 
@@ -17,5 +16,5 @@ export default defineConfig({
         ? undefined
         : 'https://react-xp.github.io/react-xp/',
   },
-  plugins: [pluginReact(), pluginSourceBuild()],
+  plugins: [pluginReact()],
 });

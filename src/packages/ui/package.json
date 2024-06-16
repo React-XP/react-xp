@@ -20,18 +20,16 @@
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"
   },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2"
+  },
   "peerDependencies": {
-    "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
-    "tailwind-merge": "^2.3.0"
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
     "@glzr/semantic-release-npm": "^1.5.0",
-    "@radix-ui/react-slot": "^1.0.2",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
@@ -40,13 +38,10 @@
     "@semantic-release/release-notes-generator": "^14.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^5.0.7",
     "semantic-release": "^24.0.0",
-    "tailwind-merge": "^2.3.0",
     "typescript": "^5.4.2"
   },
   "keywords": [
