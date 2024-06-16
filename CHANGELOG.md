@@ -1,3 +1,10 @@
+# [1.0.0-beta.9](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2024-06-16)
+
+
+### Features
+
+* **global:** added deploy docs pipeline ([2133d8e](https://github.com/React-XP/react-xp/commit/2133d8ee07ff0115fa444b21ae6604c67780653c))
+
 # [1.0.0-beta.8](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.7...v1.0.0-beta.8) (2024-06-16)
 
 
