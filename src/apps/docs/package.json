@@ -9,9 +9,9 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "@react-xp/core": "1.0.0-beta.11",
-    "@react-xp/theme": "1.0.0-beta.11",
-    "@react-xp/ui": "1.0.0-beta.11",
+    "@react-xp/core": "1.0.0-beta.10",
+    "@react-xp/theme": "1.0.0-beta.10",
+    "@react-xp/ui": "1.0.0-beta.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
