@@ -47,3 +47,5 @@ test-report.xml
 /storybook-static
 
 /docs
+
+.env
