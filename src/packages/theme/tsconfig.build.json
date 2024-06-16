@@ -26,5 +26,10 @@
       ]
     }
   },
-  "include": ["src", "../../packages/core/src"]
+  "include": ["src"],
+  "references": [
+    {
+      "path": "../../packages/core"
+    }
+  ]
 }

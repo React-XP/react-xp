@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": "../../",
+    "rootDir": "./src",
     "outDir": "./dist",
     "target": "ES2020",
     "lib": ["DOM", "ES2020"],
@@ -27,5 +27,10 @@
       ]
     }
   },
-  "include": ["src", "../../packages/core/src"]
+  "include": ["src", "../../packages/core/src"],
+  "references": [
+    {
+      "path": "../../packages/core"
+    }
+  ]
 }
