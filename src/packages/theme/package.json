@@ -29,12 +29,14 @@
     "format": "biome format --write"
   },
   "peerDependencies": {
+    "@react-xp/core": "*",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
     "@glzr/semantic-release-npm": "^1.5.0",
+    "@react-xp/core": "workspace:*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@semantic-release/changelog": "^6.0.3",

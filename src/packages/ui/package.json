@@ -10,12 +10,16 @@
   ],
   "exports": {
     "./box": {
-      "source": "./src/components/box/index.tsx",
+      "source": "./src/components/box/index.ts",
       "default": "./dist/components/box/index.js"
     },
     "./button": {
-      "source": "./src/components/button/index.tsx",
+      "source": "./src/components/button/index.ts",
       "default": "./dist/components/button/index.js"
+    },
+    "./typography": {
+      "source": "./src/components/typography/index.ts",
+      "default": "./dist/components/typography/index.js"
     }
   },
   "scripts": {
@@ -28,12 +32,16 @@
     "@radix-ui/react-slot": "^1.0.2"
   },
   "peerDependencies": {
+    "@react-xp/core": "*",
+    "@react-xp/theme": "*",
     "react": "^17.0.0 || ^18.0.0",
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
     "@glzr/semantic-release-npm": "^1.5.0",
+    "@react-xp/core": "workspace:*",
+    "@react-xp/theme": "workspace:*",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",

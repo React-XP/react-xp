@@ -1,12 +1,6 @@
 import { Slot } from '@radix-ui/react-slot';
-import * as React from 'react';
-
-// import {
-//   type VariantProps,
-//   cn,
-//   cva,
-// } from '../../../../core/src/modules/tailwind';
 import { type VariantProps, cn, cva } from '@react-xp/core/tailwind';
+import * as React from 'react';
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50',

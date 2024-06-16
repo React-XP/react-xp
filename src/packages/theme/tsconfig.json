@@ -14,23 +14,12 @@
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
     "composite": true,
-    "declaration": true,
-    "paths": {
-      "@react-xp/core/*": [
-        "../../packages/core/src/components/*",
-        "../../packages/core/src/contexts/*",
-        "../../packages/core/src/helpers/*",
-        "../../packages/core/src/hooks/*",
-        "../../packages/core/src/modules/*",
-        "../../packages/core/src/providers/*",
-        "../../packages/core/src/types/*"
-      ]
-    }
+    "declaration": true
   },
-  "include": ["src", "../../packages/core/src"],
+  "include": ["src"],
   "references": [
     {
-      "path": "../../packages/core"
+      "path": "../core"
     }
   ]
 }

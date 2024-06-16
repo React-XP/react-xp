@@ -99,14 +99,14 @@ importers:
   src/apps/docs:
     dependencies:
       '@react-xp/core':
-        specifier: 1.0.0-beta.13
-        version: 1.0.0-beta.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/core
       '@react-xp/theme':
-        specifier: 1.0.0-beta.13
-        version: 1.0.0-beta.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/theme
       '@react-xp/ui':
-        specifier: 1.0.0-beta.13
-        version: 1.0.0-beta.13(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: workspace:*
+        version: link:../../packages/ui
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -230,6 +230,9 @@ importers:
       '@glzr/semantic-release-npm':
         specifier: ^1.5.0
         version: 1.5.0(semantic-release@24.0.0(typescript@5.4.5))
+      '@react-xp/core':
+        specifier: workspace:*
+        version: link:../core
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@24.0.0(typescript@5.4.5))
@@ -288,6 +291,12 @@ importers:
       '@glzr/semantic-release-npm':
         specifier: ^1.5.0
         version: 1.5.0(semantic-release@24.0.0(typescript@5.4.5))
+      '@react-xp/core':
+        specifier: workspace:*
+        version: link:../core
+      '@react-xp/theme':
+        specifier: workspace:*
+        version: link:../theme
       '@semantic-release/changelog':
         specifier: ^6.0.3
         version: 6.0.3(semantic-release@24.0.0(typescript@5.4.5))
@@ -1047,24 +1056,6 @@ packages:
     peerDependenciesMeta:
       '@types/react':
         optional: true
-
-  '@react-xp/core@1.0.0-beta.13':
-    resolution: {integrity: sha512-sMdGBZ+m877C8DwOEJeObutYBXzs6cFgWQTKAdxq6Lwhwip39oDps+Vo/915/erDP0pRGnvz5VZAz1qY/epi+g==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
-
-  '@react-xp/theme@1.0.0-beta.13':
-    resolution: {integrity: sha512-51HMOPjW85uLz5zVO2ejv+ZrSPnBjGgowc6oE3WV01nZnCn07gQud9VhQqUUj43D5iFDgFQSOdqM7WEAaVo5uA==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
-
-  '@react-xp/ui@1.0.0-beta.13':
-    resolution: {integrity: sha512-uIYi21sjeJXNxOkKNUFBcRnDtWM8GBgpXRc7iev6rhbb9O3+6nlOWQByXYIUHdfca5qQSDamGPTUvjYAgKFDng==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
 
   '@rsbuild/core@0.7.7':
     resolution: {integrity: sha512-thalodQRNOHk8G05CsdPm07GJKxmwTLeVYNIx1UKH7fFr7z/gsLsxIikez0tErY3SEBbQuFWFC+bYdX6dduVxw==}
@@ -5804,27 +5795,6 @@ snapshots:
       react: 18.3.1
     optionalDependencies:
       '@types/react': 18.3.3
-
-  '@react-xp/core@1.0.0-beta.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      class-variance-authority: 0.7.0
-      clsx: 2.1.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      tailwind-merge: 2.3.0
-
-  '@react-xp/theme@1.0.0-beta.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-
-  '@react-xp/ui@1.0.0-beta.13(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
-    dependencies:
-      '@radix-ui/react-slot': 1.0.2(@types/react@18.3.3)(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    transitivePeerDependencies:
-      - '@types/react'
 
   '@rsbuild/core@0.7.7':
     dependencies:
