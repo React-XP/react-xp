@@ -1,0 +1,52 @@
+name: Deploy Docs to Github pages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build package core
+        working-directory: ./src/packages/core
+        run: pnpm run build
+
+      - name: Build package theme
+        working-directory: ./src/packages/theme
+        run: pnpm run build
+
+      - name: Build package ui
+        working-directory: ./src/packages/ui
+        run: pnpm run build
+
+      - name: Build docs
+        working-directory: ./src/apps/docs
+        run: pnpm run build
+
+      - name: Deploy docs
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          target_brach: gh-pages
+          build_dir: src/apps/docs/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
