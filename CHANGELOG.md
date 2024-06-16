@@ -1,3 +1,10 @@
+# [1.0.0-beta.11](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.10...v1.0.0-beta.11) (2024-06-16)
+
+
+### Bug Fixes
+
+* **global:** refined release of packages paths ([9581db5](https://github.com/React-XP/react-xp/commit/9581db52296cb687204584c8f1547633c869785a))
+
 # [1.0.0-beta.10](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2024-06-16)
 
 
