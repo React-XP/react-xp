@@ -36,5 +36,13 @@
       ]
     }
   },
-  "include": ["src", "../../packages/core/src", "../../packages/theme/src"]
+  "include": ["src", "../../packages/core/src", "../../packages/theme/src"],
+  "references": [
+    {
+      "path": "../../packages/core"
+    },
+    {
+      "path": "../../packages/theme"
+    }
+  ]
 }
