@@ -10,12 +10,16 @@
   ],
   "exports": {
     "./useDidMount": {
-      "source": "./src/hooks/useDidMount/useDidMount.ts",
-      "default": "./dist/hooks/useDidMount/useDidMount.js"
+      "source": "./src/hooks/useDidMount/index.ts",
+      "default": "./dist/hooks/useDidMount/index.js"
     },
     "./useDidUnmount": {
-      "source": "./src/hooks/useDidUnmount/useDidUnmount.ts",
-      "default": "./dist/hooks/useDidUnmount/useDidUnmount.js"
+      "source": "./src/hooks/useDidUnmount/index.ts",
+      "default": "./dist/hooks/useDidUnmount/index.js"
+    },
+    "./tailwind": {
+      "source": "./src/modules/tailwind/index.ts",
+      "default": "./dist/modules/tailwind/index.js"
     }
   },
   "scripts": {
@@ -23,6 +27,11 @@
     "check": "biome check --write",
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.1",
+    "tailwind-merge": "^2.3.0"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",

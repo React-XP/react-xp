@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
+    "rootDir": "../../",
     "outDir": "./dist",
-    "rootDir": "./src",
     "target": "ES2020",
     "lib": ["DOM", "ES2020"],
     "module": "ESNext",
@@ -13,7 +13,18 @@
     "resolveJsonModule": true,
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
-    "declaration": true
+    "declaration": true,
+    "paths": {
+      "@react-xp/core/*": [
+        "../../packages/core/src/components/*",
+        "../../packages/core/src/contexts/*",
+        "../../packages/core/src/helpers/*",
+        "../../packages/core/src/hooks/*",
+        "../../packages/core/src/modules/*",
+        "../../packages/core/src/providers/*",
+        "../../packages/core/src/types/*"
+      ]
+    }
   },
-  "include": ["src"]
+  "include": ["src", "../../packages/core/src"]
 }

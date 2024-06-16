@@ -15,21 +15,27 @@
       "@react-xp/core/*": [
         "../../packages/core/src/components/*",
         "../../packages/core/src/contexts/*",
+        "../../packages/core/src/helpers/*",
         "../../packages/core/src/hooks/*",
+        "../../packages/core/src/modules/*",
         "../../packages/core/src/providers/*",
         "../../packages/core/src/types/*"
       ],
       "@react-xp/theme/*": [
         "../../packages/theme/src/components/*",
         "../../packages/theme/src/contexts/*",
+        "../../packages/theme/src/helpers/*",
         "../../packages/theme/src/hooks/*",
+        "../../packages/theme/src/modules/*",
         "../../packages/theme/src/providers/*",
         "../../packages/theme/src/types/*"
       ],
       "@react-xp/ui/*": [
         "../../packages/ui/src/components/*",
         "../../packages/ui/src/contexts/*",
+        "../../packages/ui/src/helpers/*",
         "../../packages/ui/src/hooks/*",
+        "../../packages/ui/src/modules/*",
         "../../packages/ui/src/providers/*",
         "../../packages/ui/src/types/*"
       ]
