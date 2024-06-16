@@ -1,3 +1,19 @@
+# [1.0.0-beta.10](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.9...v1.0.0-beta.10) (2024-06-16)
+
+
+### Bug Fixes
+
+* **docs:** fixed base href ([77879ab](https://github.com/React-XP/react-xp/commit/77879ab8b34b68b5f772c3a22a9b899fe113b076))
+* **docs:** fixed base href v2 ([7b17a9c](https://github.com/React-XP/react-xp/commit/7b17a9c0489c5558c4c3256c266572ba3bf26823))
+
+
+### Features
+
+* **docs:** added initial page ([0783236](https://github.com/React-XP/react-xp/commit/0783236b4e039cbd1743b6064c4580a772754298))
+* **docs:** added tailwindcss ([9255ced](https://github.com/React-XP/react-xp/commit/9255ced08afe187a0147e56b0ca558096a258145))
+* **global:** improved pipelines ([37c9676](https://github.com/React-XP/react-xp/commit/37c9676a906ad7b9fc549b602d89edd7c22f7a89))
+* **ui:** added button ([dcb39da](https://github.com/React-XP/react-xp/commit/dcb39dae84f0e8fb842d4f7075316f6db3f484e7))
+
 # [1.0.0-beta.9](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.8...v1.0.0-beta.9) (2024-06-16)
 
 
