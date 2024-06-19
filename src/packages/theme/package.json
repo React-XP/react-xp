@@ -17,6 +17,10 @@
       "source": "./src/modules/tailwind/index.ts",
       "default": "./dist/modules/tailwind/index.js"
     },
+    "./tailwindConfig": {
+      "source": "./src/modules/tailwind/tailwind.config.ts",
+      "default": "./dist/modules/tailwind/tailwind.config.js"
+    },
     "./themeProvider": {
       "source": "./src/providers/themeProvider/index.ts",
       "default": "./dist/providers/themeProvider/index.js"

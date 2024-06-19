@@ -9,6 +9,10 @@
     "dist/"
   ],
   "exports": {
+    "./accordion": {
+      "source": "./src/components/accordion/index.ts",
+      "default": "./dist/components/accordion/index.js"
+    },
     "./box": {
       "source": "./src/components/box/index.ts",
       "default": "./dist/components/box/index.js"
@@ -16,6 +20,10 @@
     "./button": {
       "source": "./src/components/button/index.ts",
       "default": "./dist/components/button/index.js"
+    },
+    "./navigation-menu": {
+      "source": "./src/components/navigationMenu/index.ts",
+      "default": "./dist/components/navigationMenu/index.js"
     },
     "./typography": {
       "source": "./src/components/typography/index.ts",
@@ -29,7 +37,11 @@
     "format": "biome format --write"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.0.2"
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-slot": "^1.0.2",
+    "install": "^0.13.0",
+    "lucide-react": "^0.395.0"
   },
   "peerDependencies": {
     "@react-xp/core": "*",
