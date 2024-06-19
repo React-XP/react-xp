@@ -1,3 +1,11 @@
+# [1.0.0-beta.15](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2024-06-19)
+
+
+### Features
+
+* **global:** removed unused files ([6090ebb](https://github.com/React-XP/react-xp/commit/6090ebb2dc5ebe2d43773d5faa0d0bd3a369ffc1))
+* **ui:** added accordion and navigation menu components ([bb35d84](https://github.com/React-XP/react-xp/commit/bb35d846af949d9f0083e290e0bb1d3ecf08115e))
+
 # [1.0.0-beta.14](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.13...v1.0.0-beta.14) (2024-06-16)
 
 
