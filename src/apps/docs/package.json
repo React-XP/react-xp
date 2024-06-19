@@ -13,6 +13,7 @@
     "@react-xp/core": "workspace:*",
     "@react-xp/theme": "workspace:*",
     "@react-xp/ui": "workspace:*",
+    "@tanstack/react-router": "^1.39.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -21,6 +22,7 @@
     "@rsbuild/core": "^0.7.7",
     "@rsbuild/plugin-react": "^0.7.7",
     "@rsbuild/plugin-source-build": "^0.7.7",
+    "@tanstack/router-devtools": "^1.39.4",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "typescript": "^5.4.2"
