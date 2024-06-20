@@ -1,3 +1,3 @@
-const tailwindConfig = require('@react-xp/theme/tailwindConfig');
+const tailwindConfig = require('@react-xp/theme/tailwind-config');
 
 module.exports = tailwindConfig;

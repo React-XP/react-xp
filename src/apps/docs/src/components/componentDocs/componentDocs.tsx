@@ -9,7 +9,7 @@ interface ComponentDocsProps {
 
 export const ComponentDocs = ({ children, title }: ComponentDocsProps) => {
   return (
-    <Accordion.ListComposed
+    <Accordion
       items={[
         {
           title,

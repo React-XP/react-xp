@@ -23,7 +23,8 @@
     }
   },
   "scripts": {
-    "build": "rimraf dist && tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
+    "build": "tsc --project tsconfig.build.json",
     "check": "biome check --write",
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"
