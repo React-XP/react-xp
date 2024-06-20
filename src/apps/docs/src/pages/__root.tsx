@@ -1,34 +1,9 @@
-import { cn } from '@react-xp/core/tailwind';
+import { Box } from '@react-xp/ui/box';
+import { ListItem } from '@react-xp/ui/list-item';
 import { NavigationMenu } from '@react-xp/ui/navigation-menu';
-import { Link, Outlet, createRootRoute } from '@tanstack/react-router';
+import { ThemeToggle } from '@react-xp/ui/theme-toggle';
+import { Outlet, createRootRoute } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
-import React from 'react';
-
-const ListItem = React.forwardRef<
-  React.ElementRef<'a'>,
-  React.ComponentPropsWithoutRef<'a'>
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenu.Link asChild>
-        <a
-          ref={ref}
-          className={cn(
-            'block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground',
-            className,
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenu.Link>
-    </li>
-  );
-});
-ListItem.displayName = 'ListItem';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -71,71 +46,62 @@ const components: { title: string; href: string; description: string }[] = [
 export const rootRoute = createRootRoute({
   component: () => (
     <>
-      <NavigationMenu>
-        <NavigationMenu.List>
-          <NavigationMenu.Item>
-            <NavigationMenu.Trigger>Getting started</NavigationMenu.Trigger>
-            <NavigationMenu.Content>
-              <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenu.Link asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
-                      {/* <Icons.logo className="h-6 w-6" /> */}
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                        shadcn/ui
-                      </div>
-                      <p className="text-sm leading-tight text-muted-foreground">
-                        Beautifully designed components that you can copy and
-                        paste into your apps. Accessible. Customizable. Open
-                        Source.
-                      </p>
-                    </a>
-                  </NavigationMenu.Link>
-                </li>
-                <ListItem href="/docs" title="Introduction">
-                  Re-usable components built using Radix UI and Tailwind CSS.
-                </ListItem>
-                <ListItem href="/docs/installation" title="Installation">
-                  How to install dependencies and structure your app.
-                </ListItem>
-                <ListItem href="/docs/primitives/typography" title="Typography">
-                  Styles for headings, paragraphs, lists...etc
-                </ListItem>
-              </ul>
-            </NavigationMenu.Content>
-          </NavigationMenu.Item>
-          <NavigationMenu.Item>
-            <NavigationMenu.Trigger>Components</NavigationMenu.Trigger>
-            <NavigationMenu.Content>
-              <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-                {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
-                    {component.description}
+      <NavigationMenu
+        items={{
+          start: [
+            {
+              title: 'Getting started',
+              key: 'root',
+              content: (
+                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenu.Primitives.Link asChild>
+                      <a
+                        className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                        href="/"
+                      >
+                        {/* <Icons.logo className="h-6 w-6" /> */}
+                        <div className="mb-2 mt-4 text-lg font-medium">
+                          shadcn/ui
+                        </div>
+                        <p className="text-sm leading-tight text-muted-foreground">
+                          Beautifully designed components that you can copy and
+                          paste into your apps. Accessible. Customizable. Open
+                          Source.
+                        </p>
+                      </a>
+                    </NavigationMenu.Primitives.Link>
+                  </li>
+                  <ListItem href="/docs" title="Introduction">
+                    Re-usable components built using Radix UI and Tailwind CSS.
                   </ListItem>
-                ))}
-              </ul>
-            </NavigationMenu.Content>
-          </NavigationMenu.Item>
-          <NavigationMenu.Item>
-            <Link to="/docs" className="[&.active]:font-bold">
-              <NavigationMenu.Link
-                className={NavigationMenu.styles.getNavigationMenuTriggerStyle()}
-              >
-                Documentation
-              </NavigationMenu.Link>
-            </Link>
-          </NavigationMenu.Item>
-        </NavigationMenu.List>
-      </NavigationMenu>
+                  <ListItem href="/docs/installation" title="Installation">
+                    How to install dependencies and structure your app.
+                  </ListItem>
+                  <ListItem
+                    href="/docs/primitives/typography"
+                    title="Typography"
+                  >
+                    Styles for headings, paragraphs, lists...etc
+                  </ListItem>
+                </ul>
+              ),
+            },
+            { title: 'Documentation', key: 'docs', href: '/docs' },
+          ],
+          end: [
+            {
+              title: 'Theme Toggle',
+              key: 'themeToggle',
+              render: <ThemeToggle />,
+            },
+          ],
+        }}
+      />
 
-      <Outlet />
+      <Box className="px-2">
+        <Outlet />
+      </Box>
       <TanStackRouterDevtools />
     </>
   ),

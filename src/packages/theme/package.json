@@ -17,17 +17,18 @@
       "source": "./src/modules/tailwind/index.ts",
       "default": "./dist/modules/tailwind/index.js"
     },
-    "./tailwindConfig": {
+    "./tailwind-config": {
       "source": "./src/modules/tailwind/tailwind.config.ts",
       "default": "./dist/modules/tailwind/tailwind.config.js"
     },
-    "./themeProvider": {
+    "./theme-provider": {
       "source": "./src/providers/themeProvider/index.ts",
       "default": "./dist/providers/themeProvider/index.js"
     }
   },
   "scripts": {
-    "build": "rimraf dist && tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
+    "build": "tsc --project tsconfig.build.json",
     "check": "biome check --write",
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"

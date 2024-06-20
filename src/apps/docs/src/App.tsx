@@ -1,11 +1,11 @@
-import { ThemeProvider } from '@react-xp/theme/themeProvider';
+import { ThemeProvider } from '@react-xp/theme/theme-provider';
 import { RouterProvider } from '@tanstack/react-router';
 import './assets/main.css';
 import { router } from './pages';
 
 const App = () => {
   return (
-    <ThemeProvider theme="light">
+    <ThemeProvider defaultTheme="light">
       <RouterProvider router={router} />
     </ThemeProvider>
   );
