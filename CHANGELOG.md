@@ -1,3 +1,10 @@
+# [1.0.0-beta.16](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2024-06-20)
+
+
+### Features
+
+* **ui:** added listItem and dropdown menu ([fd57fbc](https://github.com/React-XP/react-xp/commit/fd57fbcab14e502184df0e3e07ef0c7dbb81aea4))
+
 # [1.0.0-beta.15](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.14...v1.0.0-beta.15) (2024-06-19)
 
 
