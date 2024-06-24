@@ -3,13 +3,20 @@ import { cn } from '@react-xp/core/tailwind';
 type TBoxProps = {
   className?: string;
   children?: React.ReactNode;
-  dir?: 'horizontal' | 'vertical';
+  orientation?: 'horizontal' | 'vertical';
 };
 
-export const Box = ({ className, children, dir = 'vertical' }: TBoxProps) => {
-  const directionClassName = dir === 'horizontal' ? 'flex-row' : 'flex-col';
+export const Box = ({
+  className,
+  children,
+  orientation = 'vertical',
+}: TBoxProps) => {
+  const orientationClassName =
+    orientation === 'horizontal' ? 'flex-row' : 'flex-col';
 
   return (
-    <div className={cn('flex', directionClassName, className)}>{children}</div>
+    <div className={cn('flex', orientationClassName, className)}>
+      {children}
+    </div>
   );
 };

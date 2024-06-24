@@ -21,6 +21,18 @@
       "source": "./src/components/button/index.ts",
       "default": "./dist/components/button/index.js"
     },
+    "./card": {
+      "source": "./src/components/card/index.ts",
+      "default": "./dist/components/card/index.js"
+    },
+    "./dialog": {
+      "source": "./src/components/dialog/index.ts",
+      "default": "./dist/components/dialog/index.js"
+    },
+    "./drawer": {
+      "source": "./src/components/drawer/index.ts",
+      "default": "./dist/components/drawer/index.js"
+    },
     "./dropdown-menu": {
       "source": "./src/components/dropdownMenu/index.ts",
       "default": "./dist/components/dropdownMenu/index.js"
@@ -32,6 +44,14 @@
     "./navigation-menu": {
       "source": "./src/components/navigationMenu/index.ts",
       "default": "./dist/components/navigationMenu/index.js"
+    },
+    "./separator": {
+      "source": "./src/components/separator/index.ts",
+      "default": "./dist/components/separator/index.js"
+    },
+    "./tabs": {
+      "source": "./src/components/tabs/index.ts",
+      "default": "./dist/components/tabs/index.js"
     },
     "./theme-toggle": {
       "source": "./src/components/themeToggle/index.ts",
@@ -51,11 +71,15 @@
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.0",
     "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-separator": "^1.1.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.1.0",
     "install": "^0.13.0",
-    "lucide-react": "^0.395.0"
+    "lucide-react": "^0.395.0",
+    "vaul": "^0.9.1"
   },
   "peerDependencies": {
     "@react-xp/core": "*",

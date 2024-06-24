@@ -15,7 +15,8 @@
     "Antd",
     "flexboxgrid",
     "Avenir",
-    "shadcn"
+    "shadcn",
+    "vaul"
   ],
   "flagWords": [],
   "ignorePaths": [

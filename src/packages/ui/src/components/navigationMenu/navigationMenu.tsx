@@ -29,7 +29,7 @@ export const NavigationMenu = ({ items }: TNavigationMenuProps) => {
   const { end, middle, start } = items;
   return (
     <NavigationMenuPrimitive className="max-w-full">
-      <Box dir="horizontal" className="p-4 justify-between w-full">
+      <Box orientation="horizontal" className="p-4 justify-between w-full">
         <Box className="justify-start">
           <NavigationMenuList>
             {start?.map((item) => {
