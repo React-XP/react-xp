@@ -3,9 +3,10 @@ module.exports = {
     'main',
     {
       name: 'develop',
-      prerelease: 'rc',
+      prerelease: 'beta',
     },
   ],
+  tagFormat: 'ui-v${version}',
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -15,11 +16,19 @@ module.exports = {
         changelogFile: 'CHANGELOG.md',
       },
     ],
+    // [
+    //   '@semantic-release/npm',
+    //   {
+    //     npmPublish: true,
+    //     tarballDir: 'dist',
+    //   },
+    // ],
     [
-      '@semantic-release/npm',
+      '@glzr/semantic-release-npm',
       {
         npmPublish: true,
         tarballDir: 'dist',
+        packageManager: 'pnpm',
       },
     ],
     [
@@ -30,11 +39,11 @@ module.exports = {
           'chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
       },
     ],
-    // [
-    // 	'@semantic-release/github',
-    // 	{
-    // 		assets: [{ path: 'dist/**' }],
-    // 	},
-    // ],
+    [
+      '@semantic-release/github',
+      {
+        assets: [{ path: 'dist/**' }],
+      },
+    ],
   ],
 };

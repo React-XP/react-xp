@@ -1,5 +1,6 @@
 {
   "name": "@react-xp/docs",
+  "description": "This is a documentation app for React XP.",
   "version": "0.0.0",
   "scripts": {
     "build": "rsbuild build",
