@@ -9,6 +9,14 @@
     "dist/"
   ],
   "exports": {
+    "./console": {
+      "source": "./src/modules/console/index.ts",
+      "default": "./dist/modules/console/index.js"
+    },
+    "./eventHub": {
+      "source": "./src/modules/eventHub/index.ts",
+      "default": "./dist/modules/eventHub/index.js"
+    },
     "./useDidMount": {
       "source": "./src/hooks/useDidMount/index.ts",
       "default": "./dist/hooks/useDidMount/index.js"

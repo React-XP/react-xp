@@ -12,6 +12,6 @@ if (rootEl) {
       </React.StrictMode>
     ) : (
       <App />
-    )
+    ),
   );
 }

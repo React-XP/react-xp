@@ -16,7 +16,8 @@
     "flexboxgrid",
     "Avenir",
     "shadcn",
-    "vaul"
+    "vaul",
+    "rsbuild"
   ],
   "flagWords": [],
   "ignorePaths": [

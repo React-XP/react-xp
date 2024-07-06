@@ -8,7 +8,7 @@ import {
   Dialog as DialogPrimitive,
   DialogTitle,
   DialogTrigger,
-} from './primitives/dialog';
+} from '../dialog/primitives/dialog';
 
 type TDialogButton = {
   label: string;
@@ -24,7 +24,7 @@ interface DialogProps {
   trigger?: React.ReactNode;
 }
 
-export const Dialog = ({
+export const Modal = ({
   buttons,
   children,
   subTitle,

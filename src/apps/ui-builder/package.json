@@ -1,6 +1,6 @@
 {
-  "name": "@react-xp/new-app",
-  "description": "This is a boilerplate to create new apps for React XP.",
+  "name": "@react-xp/ui-builder",
+  "description": "This is an app to build UI components for React XP.",
   "version": "0.0.0",
   "scripts": {
     "build": "rsbuild build",
@@ -15,7 +15,10 @@
     "@react-xp/theme": "workspace:*",
     "@react-xp/ui": "workspace:*",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.3.1",
+    "react-draggable": "^4.4.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
