@@ -1,37 +1,12 @@
-import type React from 'react';
-import {
-  DrawerClose,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  Drawer as DrawerPrimitive,
-  DrawerTitle,
-  DrawerTrigger,
-} from './primitives/drawer';
+import { cn } from '@react-xp/core/tailwind';
+import type { TComponentBaseProps } from '../../types/components';
 
-interface DrawerProps {
-  title?: React.ReactNode;
-  description?: React.ReactNode;
-  trigger?: React.ReactNode;
-}
+type TDrawerProps = TComponentBaseProps;
 
-export const Drawer = ({ description, title, trigger }: DrawerProps) => {
+export const Drawer = ({ children, className }: TDrawerProps) => {
   return (
-    <DrawerPrimitive>
-      <DrawerTrigger>{trigger}</DrawerTrigger>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>{title}</DrawerTitle>
-          <DrawerDescription>{description}</DrawerDescription>
-        </DrawerHeader>
-        <DrawerFooter>
-          {/* <Button>Submit</Button> */}
-          <DrawerClose>
-            {/* <Button variant="outline">Cancel</Button> */}
-          </DrawerClose>
-        </DrawerFooter>
-      </DrawerContent>
-    </DrawerPrimitive>
+    <div className={cn('drawer', className)}>
+      <div className="drawer-side">{children}</div>
+    </div>
   );
 };

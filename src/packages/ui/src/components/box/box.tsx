@@ -1,9 +1,8 @@
 import { cn } from '@react-xp/core/tailwind';
 import React from 'react';
+import type { TComponentBaseProps } from '../../types/components';
 
-type TBoxProps = {
-  className?: string;
-  children?: React.ReactNode;
+type TBoxProps = TComponentBaseProps & {
   id?: string;
   orientation?: 'horizontal' | 'vertical';
   ref?: React.RefObject<HTMLDivElement | null>;
@@ -25,3 +24,5 @@ export const Box = React.forwardRef(
     );
   },
 );
+
+Box.displayName = 'Box';
