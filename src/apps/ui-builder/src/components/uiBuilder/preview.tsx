@@ -1,7 +1,7 @@
 import type { TComponentBuilder } from '@/types';
 import { useConsole } from '@react-xp/core/console';
 import { Box } from '@react-xp/ui/box';
-import { Dialog } from '@react-xp/ui/dialog';
+import { Modal } from '@react-xp/ui/modal';
 import { Typography } from '@react-xp/ui/typography';
 import React from 'react';
 import { useDrop } from 'react-dnd';
@@ -43,7 +43,7 @@ export const Preview = () => {
         className="border-solid border-black border-2 p-2 w-full h-full"
         ref={drop}
       >
-        <Dialog title="Preview">Test</Dialog>
+        <Modal title="Preview">Test</Modal>
         {componentsPreview}
       </Box>
     </Box>

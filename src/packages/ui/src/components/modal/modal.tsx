@@ -1,61 +1,45 @@
+import { cn } from '@react-xp/core/tailwind';
 import type React from 'react';
 import { Button } from '../button';
-import {
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  Dialog as DialogPrimitive,
-  DialogTitle,
-  DialogTrigger,
-} from '../dialog/primitives/dialog';
 
 type TDialogButton = {
-  label: string;
+  children: string;
   onClick: () => void;
-  render?: () => React.ReactNode;
 };
 
 interface DialogProps {
   buttons?: Array<TDialogButton>;
   children: React.ReactNode;
-  subTitle?: React.ReactNode;
   title: React.ReactNode;
-  trigger?: React.ReactNode;
 }
 
-export const Modal = ({
-  buttons,
-  children,
-  subTitle,
-  title,
-  trigger,
-}: DialogProps) => {
+export const Modal = ({ buttons, children, title }: DialogProps) => {
+  const isOpen = false;
+
   return (
-    <DialogPrimitive modal open>
-      <DialogTrigger>{trigger}</DialogTrigger>
-      <DialogContent>
-        <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
-          {subTitle && <DialogDescription>{subTitle}</DialogDescription>}
-        </DialogHeader>
+    <dialog
+      className={cn(
+        'modal modal-bottom sm:modal-middle',
+        isOpen ? 'modal-open' : undefined,
+      )}
+    >
+      <div className="modal-box">
+        <h3 className="font-bold text-lg">{title}</h3>
         {children}
-        {buttons?.length && (
-          <DialogFooter>
-            {buttons.map(({ label, onClick, render }) => (
-              <>
-                {render ? (
-                  render()
-                ) : (
-                  <Button key={label} onClick={onClick}>
-                    label
-                  </Button>
-                )}
-              </>
-            ))}
-          </DialogFooter>
-        )}
-      </DialogContent>
-    </DialogPrimitive>
+        <div className="modal-action">
+          {buttons?.map((button, index) => (
+            <Button
+              key={`modal-button-${
+                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                index
+              }`}
+              onClick={button.onClick}
+            >
+              {children}
+            </Button>
+          ))}
+        </div>
+      </div>
+    </dialog>
   );
 };

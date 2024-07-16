@@ -25,37 +25,33 @@
       "source": "./src/components/card/index.ts",
       "default": "./dist/components/card/index.js"
     },
-    "./dialog": {
-      "source": "./src/components/dialog/index.ts",
-      "default": "./dist/components/dialog/index.js"
+    "./divider": {
+      "source": "./src/components/divider/index.ts",
+      "default": "./dist/components/divider/index.js"
     },
     "./drawer": {
       "source": "./src/components/drawer/index.ts",
       "default": "./dist/components/drawer/index.js"
     },
-    "./dropdown-menu": {
-      "source": "./src/components/dropdownMenu/index.ts",
-      "default": "./dist/components/dropdownMenu/index.js"
+    "./dropdown": {
+      "source": "./src/components/dropdown/index.ts",
+      "default": "./dist/components/dropdown/index.js"
     },
-    "./list-item": {
-      "source": "./src/components/listItem/index.ts",
-      "default": "./dist/components/listItem/index.js"
+    "./menu": {
+      "source": "./src/components/menu/index.ts",
+      "default": "./dist/components/menu/index.js"
     },
-    "./navigation-menu": {
-      "source": "./src/components/navigationMenu/index.ts",
-      "default": "./dist/components/navigationMenu/index.js"
-    },
-    "./separator": {
-      "source": "./src/components/separator/index.ts",
-      "default": "./dist/components/separator/index.js"
+    "./modal": {
+      "source": "./src/components/modal/index.ts",
+      "default": "./dist/components/modal/index.js"
     },
     "./tabs": {
       "source": "./src/components/tabs/index.ts",
       "default": "./dist/components/tabs/index.js"
     },
-    "./theme-toggle": {
-      "source": "./src/components/themeToggle/index.ts",
-      "default": "./dist/components/themeToggle/index.js"
+    "./theme-controller": {
+      "source": "./src/components/themeController/index.ts",
+      "default": "./dist/components/themeController/index.js"
     },
     "./typography": {
       "source": "./src/components/typography/index.ts",

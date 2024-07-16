@@ -1,17 +1,17 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import React from 'react';
 
-type TDropdownMenuItem = {
-  title: string;
+type TDropdownItem = {
+  children: React.ReactNode;
   onClick: () => void;
 };
 
-type TDropdownMenuProps = {
-  items?: TDropdownMenuItem[];
+type TDropdownProps = {
+  items?: TDropdownItem[];
   children?: React.ReactNode;
 };
 
-export const DropdownMenu = ({ children, items }: TDropdownMenuProps) => {
+export const Dropdown = ({ children, items }: TDropdownProps) => {
   return (
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn m-1">
@@ -29,7 +29,7 @@ export const DropdownMenu = ({ children, items }: TDropdownMenuProps) => {
               }`}
             >
               {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
-              <a onClick={item.onClick}>{item.title}</a>
+              <a onClick={item.onClick}>{item.children}</a>
             </li>
           ))}
         </ul>
@@ -38,4 +38,4 @@ export const DropdownMenu = ({ children, items }: TDropdownMenuProps) => {
   );
 };
 
-DropdownMenu.displayName = 'DropdownMenu';
+Dropdown.displayName = 'Dropdown';

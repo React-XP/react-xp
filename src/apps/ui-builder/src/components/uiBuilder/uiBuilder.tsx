@@ -1,7 +1,7 @@
 import type { TComponentBuilder } from '@/types';
 import { useConsole } from '@react-xp/core/console';
 import { Box } from '@react-xp/ui/box';
-import { Separator } from '@react-xp/ui/separator';
+import { Divider } from '@react-xp/ui/divider';
 import { Typography } from '@react-xp/ui/typography';
 import React from 'react';
 import { DndProvider } from 'react-dnd';
@@ -91,26 +91,26 @@ export const UiBuilder = () => {
     Array<React.ReactNode>
   >([]);
 
-  const handleOnStop = React.useCallback(
-    (component: TComponentBuilder) =>
-      (e: DraggableEvent, data: DraggableData) => {
-        console.log('handleOnStop', { e, data });
+  // const handleOnStop = React.useCallback(
+  //   (component: TComponentBuilder) =>
+  //     (e: DraggableEvent, data: DraggableData) => {
+  //       console.log('handleOnStop', { e, data });
 
-        if (checkInside(e, previewBlockRef, previewBlockRef)) {
-          setComponentsPreview((prev) => [
-            ...prev,
-            React.createElement(
-              component.component,
-              {
-                key: `${component.name}-${prev.length}`,
-              },
-              component.example,
-            ),
-          ]);
-        }
-      },
-    [console.log],
-  );
+  //       if (checkInside(previewBlockRef, previewBlockRef)) {
+  //         setComponentsPreview((prev) => [
+  //           ...prev,
+  //           React.createElement(
+  //             component.component,
+  //             {
+  //               key: `${component.name}-${prev.length}`,
+  //             },
+  //             component.example
+  //           ),
+  //         ]);
+  //       }
+  //     },
+  //   [console.log]
+  // );
 
   console.log('render', { components, componentsPreview });
 
@@ -125,7 +125,7 @@ export const UiBuilder = () => {
           <Box orientation="vertical" className="w-full">
             <Typography.H2>Components</Typography.H2>
 
-            <Separator />
+            <Divider />
 
             <Box className="h-2" />
 
@@ -147,7 +147,7 @@ export const UiBuilder = () => {
           <Box orientation="vertical" className="w-full">
             <Typography.H2>Code</Typography.H2>
 
-            <Separator />
+            <Divider />
 
             <Box className="h-2" />
 
