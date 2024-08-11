@@ -2,6 +2,8 @@ import { TypographyH1 } from './typography.h1';
 import { TypographyH2 } from './typography.h2';
 import { TypographyH3 } from './typography.h3';
 import { TypographyH4 } from './typography.h4';
+import { TypographyH5 } from './typography.h5';
+import { TypographyH6 } from './typography.h6';
 
 interface TypographyProps {
   children: React.ReactNode;
@@ -16,3 +18,5 @@ Typography.H1 = TypographyH1;
 Typography.H2 = TypographyH2;
 Typography.H3 = TypographyH3;
 Typography.H4 = TypographyH4;
+Typography.H5 = TypographyH5;
+Typography.H6 = TypographyH6;

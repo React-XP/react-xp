@@ -16,7 +16,7 @@ const tabsVariants = cva('tabs', {
     size: 'default',
   },
 });
-interface TabItem {
+type TTabItem = {
   label: React.ReactNode;
   children?: React.ReactNode;
   disabled?: boolean;
@@ -24,15 +24,16 @@ interface TabItem {
   key?: string;
   value: string;
   onClick?: () => void;
-}
+};
 
-interface TabsProps<TItem extends TabItem, TValue extends string>
-  extends VariantProps<typeof tabsVariants>,
-    TComponentBaseProps {
-  defaultValue?: TValue;
-  items: readonly TItem[];
-  render?: (selectedTabItem: TabItem) => React.ReactNode;
-}
+type TTabsProps<TItem extends TTabItem, TValue extends string> = VariantProps<
+  typeof tabsVariants
+> &
+  TComponentBaseProps & {
+    defaultValue?: TValue;
+    items: readonly TItem[];
+    render?: (selectedTabItem: TTabItem) => React.ReactNode;
+  };
 
 export const Tabs = /*<
   TItem extends TabItem,
@@ -44,7 +45,7 @@ export const Tabs = /*<
   items,
   render,
   size,
-}: TabsProps<TabItem, string>) => {
+}: TTabsProps<TTabItem, string>) => {
   const tabIndex = items.findIndex(
     (item) => item.value === defaultValue && item.disabled !== true,
   );
@@ -53,7 +54,7 @@ export const Tabs = /*<
     tabIndex || -1,
   );
 
-  const handleOnClick = (item: TabItem, index: number) => {
+  const handleOnClick = (item: TTabItem, index: number) => {
     setSelectedTabIndex(index);
 
     item.onClick?.();

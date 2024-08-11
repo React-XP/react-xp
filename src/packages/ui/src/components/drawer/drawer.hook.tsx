@@ -1,6 +1,6 @@
 import { useVisibility } from '@react-xp/core/visibility';
 
-export const useModal = (name: `modals.${string}`) => {
+export const useDrawer = (name: `drawers.${string}`) => {
   const { hide, show } = useVisibility(name);
 
   const close = () => {

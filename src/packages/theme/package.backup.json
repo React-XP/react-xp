@@ -12,14 +12,6 @@
     "./themeProvider": {
       "source": "./src/providers/themeProvider/index.ts",
       "default": "./dist/providers/themeProvider/index.js"
-    },
-    "./useTheme": {
-      "source": "./src/hooks/useTheme/index.ts",
-      "default": "./dist/hooks/useTheme/index.js"
-    },
-    "./tailwind": {
-      "source": "./src/modules/tailwind/index.ts",
-      "default": "./dist/modules/tailwind/index.js"
     }
   },
   "scripts": {

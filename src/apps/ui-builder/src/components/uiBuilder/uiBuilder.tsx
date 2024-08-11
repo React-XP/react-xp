@@ -56,18 +56,19 @@ const components: Array<TComponentBuilder> = [
     description: 'A box component',
     props: [
       {
-        name: 'orientation',
-        type: 'string',
-        description: 'The orientation of the box',
-      },
-      {
         name: 'className',
         type: 'string',
         description: 'The class name of the box',
       },
+      {
+        name: 'orientation',
+        type: 'string',
+        description: 'The orientation of the box',
+      },
     ],
     component: Box,
     example: <Box key="box">Preview</Box>,
+    hasChildren: true,
   },
   {
     name: 'Typography H1',
@@ -80,7 +81,7 @@ const components: Array<TComponentBuilder> = [
       },
     ],
     component: Typography.H1,
-    example: <Typography.H1 key="typography-h1">Preview</Typography.H1>,
+    hasChildren: true,
   },
 ];
 
@@ -140,7 +141,7 @@ export const UiBuilder = () => {
         <Preview />
 
         {/* Code block */}
-        <Box
+        {/* <Box
           orientation="vertical"
           className="border-solid border-black border-2 p-2 w-2/6"
         >
@@ -153,7 +154,7 @@ export const UiBuilder = () => {
 
             <code>{JSON.stringify({})}</code>
           </Box>
-        </Box>
+        </Box> */}
       </Box>
     </DndProvider>
   );

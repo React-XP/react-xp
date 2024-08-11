@@ -1,5 +1,4 @@
 import { type VariantProps, cn, cva } from '@react-xp/core/tailwind';
-import type React from 'react';
 import type { TComponentBaseProps } from '../../types/components';
 
 const dividerVariants = cva('divider', {
@@ -32,11 +31,7 @@ const dividerVariants = cva('divider', {
   },
 });
 
-interface DividerProps
-  extends VariantProps<typeof dividerVariants>,
-    TComponentBaseProps {
-  children?: React.ReactNode;
-}
+type TDividerProps = VariantProps<typeof dividerVariants> & TComponentBaseProps;
 
 export const Divider = ({
   children,
@@ -44,7 +39,7 @@ export const Divider = ({
   className,
   orientation,
   variant,
-}: DividerProps) => {
+}: TDividerProps) => {
   return (
     <div
       className={cn(

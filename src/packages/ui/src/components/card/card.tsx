@@ -3,7 +3,7 @@ import type React from 'react';
 import type { TComponentBaseProps } from '../../types/components';
 import { Button } from '../button';
 
-interface CardProps extends TComponentBaseProps {
+type TCardProps = TComponentBaseProps & {
   button?: {
     children: string;
     onClick: () => void;
@@ -14,7 +14,7 @@ interface CardProps extends TComponentBaseProps {
     alt: string;
   };
   title: React.ReactNode;
-}
+};
 
 export const Card = ({
   button,
@@ -23,7 +23,7 @@ export const Card = ({
   description,
   image,
   title,
-}: CardProps) => {
+}: TCardProps) => {
   return (
     <div className={cn('card bg-base-100 w-96 shadow-xl', className)}>
       {image && (

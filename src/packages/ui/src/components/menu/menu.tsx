@@ -1,8 +1,7 @@
-import type React from 'react';
+import type { TComponentBaseProps } from '../../types/components';
 
-type TMenuItem = {
+type TMenuItem = TComponentBaseProps & {
   key?: string;
-  children: React.ReactNode;
   href?: string;
   onClick?: () => void;
 };

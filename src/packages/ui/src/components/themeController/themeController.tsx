@@ -1,6 +1,6 @@
 import { useTheme } from '@react-xp/theme/useTheme';
 
-export function ThemeController() {
+export const ThemeController = () => {
   const { availableThemes, setTheme } = useTheme();
 
   return (
@@ -34,4 +34,4 @@ export function ThemeController() {
       </ul>
     </div>
   );
-}
+};

@@ -21,6 +21,5 @@ export type TComponentBuilder = {
   description: string;
   props: Array<TComponentBuilderProperty>;
   component: React.ComponentType;
-  example: JSX.Element;
   hasChildren?: boolean;
 };

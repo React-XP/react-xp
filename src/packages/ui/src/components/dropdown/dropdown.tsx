@@ -1,14 +1,14 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import React from 'react';
+import type { TComponentBaseProps } from '../../types/components';
 
 type TDropdownItem = {
   children: React.ReactNode;
   onClick: () => void;
 };
 
-type TDropdownProps = {
+type TDropdownProps = TComponentBaseProps & {
   items?: TDropdownItem[];
-  children?: React.ReactNode;
 };
 
 export const Dropdown = ({ children, items }: TDropdownProps) => {

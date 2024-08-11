@@ -38,13 +38,12 @@ const buttonVariants = cva('btn', {
   },
 });
 
-export interface ButtonProps
-  extends VariantProps<typeof buttonVariants>,
-    TComponentBaseProps {
-  onClick?: (e: React.MouseEvent) => void;
-}
+type TButtonProps = VariantProps<typeof buttonVariants> &
+  TComponentBaseProps & {
+    onClick?: (e: React.MouseEvent) => void;
+  };
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, TButtonProps>(
   ({ children, className, onClick, size, variant }, ref) => {
     return (
       <button
@@ -58,4 +57,5 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+
 Button.displayName = 'Button';

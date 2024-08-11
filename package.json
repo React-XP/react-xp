@@ -19,7 +19,7 @@
     "build:package-theme": "pnpm --filter \"./src/packages/theme/**\" run build",
     "build:package-ui": "pnpm --filter \"./src/packages/ui/**\" run build",
     "dev": "pnpm -r run dev",
-    "dev:packages": "pnpm run build:packages && node ./scripts/packages-watching-changes.js",
+    "dev:packages": "pnpm --filter \"./src/packages/**\" run dev",
     "dev:docs": "pnpm run build:packages && pnpm run start:docs",
     "start:docs": "pnpm --filter \"./src/apps/docs/**\" run dev",
     "dev:ui-builder": "pnpm run build:packages && pnpm run start:ui-builder",
@@ -33,7 +33,8 @@
     "lint:all": "pnpm run lint:errors && pnpm run spell:check && pnpm run lint:css",
     "spell:check": "cspell src/**/*.{ts,tsx}",
     "git:pre-commit": "lint-staged --no-stash",
-    "git:pre-push": "pnpm run build && pnpm run test:coverage"
+    "git:pre-push": "pnpm run build && pnpm run test:coverage",
+    "update:packages-exports": "node ./scripts/packages-update-packagejson-exports.js"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.1",

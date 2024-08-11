@@ -17,6 +17,14 @@
       "source": "./src/modules/eventHub/index.ts",
       "default": "./dist/modules/eventHub/index.js"
     },
+    "./tailwind": {
+      "source": "./src/modules/tailwind/index.ts",
+      "default": "./dist/modules/tailwind/index.js"
+    },
+    "./visibility": {
+      "source": "./src/modules/visibility/index.ts",
+      "default": "./dist/modules/visibility/index.js"
+    },
     "./useDidMount": {
       "source": "./src/hooks/useDidMount/index.ts",
       "default": "./dist/hooks/useDidMount/index.js"
@@ -25,22 +33,27 @@
       "source": "./src/hooks/useDidUnmount/index.ts",
       "default": "./dist/hooks/useDidUnmount/index.js"
     },
-    "./tailwind": {
-      "source": "./src/modules/tailwind/index.ts",
-      "default": "./dist/modules/tailwind/index.js"
+    "./useForceUpdate": {
+      "source": "./src/hooks/useForceUpdate/index.ts",
+      "default": "./dist/hooks/useForceUpdate/index.js"
+    },
+    "./useIsVisibleInViewport": {
+      "source": "./src/hooks/useIsVisibleInViewport/index.ts",
+      "default": "./dist/hooks/useIsVisibleInViewport/index.js"
     }
   },
   "scripts": {
     "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
     "build": "tsc --project tsconfig.build.json",
     "check": "biome check --write",
-    "dev": "rimraf dist && tsc --watch",
+    "dev": "nodemon --watch src --exec 'pnpm run build'",
     "format": "biome format --write"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.1",
-    "tailwind-merge": "^2.3.0"
+    "tailwind-merge": "^2.3.0",
+    "zustand": "^4.5.4"
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
@@ -57,6 +70,7 @@
     "@semantic-release/release-notes-generator": "^14.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "nodemon": "^3.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^5.0.7",

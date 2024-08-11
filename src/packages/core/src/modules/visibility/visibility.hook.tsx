@@ -1,26 +1,21 @@
-import React from 'react';
-import { useForceUpdate } from '../../hooks/useForceUpdate';
-import { useEventHubSubscriber } from '../eventHub';
-import { VisibilityStore } from './visibility.store';
+import { useVisibilityStore } from './visibility.store';
 
 export const useVisibility = (key: string) => {
-  const forceUpdate = useForceUpdate();
-  const [subscribed, setSubscribed] = React.useState(false);
-  useEventHubSubscriber({
-    key,
-    callback: () => {
-      forceUpdate();
-    },
-    options: { enable: subscribed },
-  });
+  const hide = useVisibilityStore((state) => state.hide);
+  const show = useVisibilityStore((state) => state.show);
 
   return {
-    isVisible: () => {
-      setSubscribed(true);
-
-      return VisibilityStore.isVisible(key);
+    hide: () => {
+      hide(key);
     },
-    hide: () => VisibilityStore.hide(key),
-    show: () => VisibilityStore.show(key),
+    show: () => {
+      show(key);
+    },
   };
+};
+
+export const useIsVisible = (key: string) => {
+  const visibilities = useVisibilityStore((state) => state.visibilities);
+
+  return visibilities[key] > 0;
 };

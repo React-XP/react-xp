@@ -16,7 +16,8 @@
     "flexboxgrid",
     "Avenir",
     "daisyui",
-    "rsbuild"
+    "rsbuild",
+    "zustand"
   ],
   "flagWords": [],
   "ignorePaths": [

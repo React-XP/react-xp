@@ -1,15 +1,15 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import React from 'react';
 
-export interface AccordionProps {
+type TAccordionProps = {
   items: {
     title: React.ReactNode;
     content: React.ReactNode;
     checked?: boolean;
   }[];
-}
+};
 
-export const Accordion = (props: AccordionProps) => {
+export const Accordion = (props: TAccordionProps) => {
   const { items } = props;
 
   return (

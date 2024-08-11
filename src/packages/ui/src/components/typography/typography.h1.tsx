@@ -1,8 +1,8 @@
-interface TypographyH1Props {
-  children: React.ReactNode;
-}
+import type { TComponentBaseProps } from '../../types/components';
 
-export function TypographyH1({ children }: TypographyH1Props) {
+type TTypographyH1Props = TComponentBaseProps;
+
+export function TypographyH1({ children }: TTypographyH1Props) {
   return (
     <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
       {children}
