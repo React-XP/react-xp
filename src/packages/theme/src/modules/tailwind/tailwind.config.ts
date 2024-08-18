@@ -4,9 +4,9 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   darkMode: ['class'],
   content: [
-    './src/**/*.{html,tsx}',
-    './node_modules/@react-xp/**/*.{html,js}',
-    '../../packages/*/src/**/*.{html,tsx}',
+    './src/**/*.{md,mdx,html,js,jsx,ts,tsx}',
+    './node_modules/@react-xp/**/*.{md,mdx,html,js,jsx,ts,tsx}',
+    '../../*/*/src/**/*.{md,mdx,html,js,jsx,ts,tsx}',
   ],
   daisyui: {
     themes: ['light', 'dark', 'cupcake'],

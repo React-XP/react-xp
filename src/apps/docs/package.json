@@ -1,36 +1,55 @@
 {
   "name": "@react-xp/docs",
-  "description": "This is a documentation app for React XP.",
+  "description": "This is documentation of React XP.",
+  "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "rsbuild build",
-    "check": "biome check --write",
-    "dev": "rsbuild dev --open",
-    "format": "biome format --write",
-    "preview": "rsbuild preview",
-    "test": "node test.js"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@react-xp/core": "workspace:*",
     "@react-xp/theme": "workspace:*",
     "@react-xp/ui": "workspace:*",
-    "@tanstack/react-router": "^1.39.4",
-    "lucide-react": "^0.395.0",
     "react": "^18.3.1",
-    "react-copy-to-clipboard": "^5.1.0",
-    "react-dom": "^18.3.1",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.0",
-    "@rsbuild/core": "^0.7.7",
-    "@rsbuild/plugin-react": "^0.7.7",
-    "@rsbuild/plugin-source-build": "^0.7.7",
-    "@tanstack/router-devtools": "^1.39.4",
+    "@chromatic-com/storybook": "^1.6.1",
+    "@eslint/js": "^9.9.0",
+    "@storybook/addon-essentials": "^8.2.9",
+    "@storybook/addon-interactions": "^8.2.9",
+    "@storybook/addon-links": "^8.2.9",
+    "@storybook/addon-onboarding": "^8.2.9",
+    "@storybook/addon-themes": "^8.2.9",
+    "@storybook/blocks": "^8.2.9",
+    "@storybook/react": "^8.2.9",
+    "@storybook/react-vite": "^8.2.9",
+    "@storybook/test": "^8.2.9",
     "@types/react": "^18.3.3",
-    "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.3.0",
-    "@types/react-syntax-highlighter": "^15.5.13",
-    "typescript": "^5.4.2"
+    "@vitejs/plugin-react": "^4.3.1",
+    "daisyui": "^4.12.10",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-storybook": "^0.8.0",
+    "globals": "^15.9.0",
+    "storybook": "^8.2.9",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }

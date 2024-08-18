@@ -26,7 +26,6 @@
     "@rsbuild/core": "^0.7.7",
     "@rsbuild/plugin-react": "^0.7.7",
     "@rsbuild/plugin-source-build": "^0.7.7",
-    "@tanstack/router-devtools": "^1.39.4",
     "@types/react": "^18.3.3",
     "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.3.0",

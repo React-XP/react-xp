@@ -20,7 +20,7 @@
     "build:package-ui": "pnpm --filter \"./src/packages/ui/**\" run build",
     "dev": "pnpm -r run dev",
     "dev:packages": "pnpm --filter \"./src/packages/**\" run dev",
-    "dev:docs": "pnpm run build:packages && pnpm run start:docs",
+    "dev:docs": "pnpm --filter \"./src/apps/docs\" run storybook",
     "start:docs": "pnpm --filter \"./src/apps/docs/**\" run dev",
     "dev:ui-builder": "pnpm run build:packages && pnpm run start:ui-builder",
     "start:ui-builder": "pnpm --filter \"./src/apps/ui-builder/**\" run dev",
