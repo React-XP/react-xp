@@ -1,3 +1,23 @@
+# [1.0.0-beta.17](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.16...v1.0.0-beta.17) (2024-08-21)
+
+
+### Bug Fixes
+
+* **global:** try fix husky ([98aff36](https://github.com/React-XP/react-xp/commit/98aff369115d0abdf6fc241ba6d29dd02b41d220))
+* **global:** try fix husky ([620a893](https://github.com/React-XP/react-xp/commit/620a893738646ed6d46276ceb91d01360f3a7635))
+
+
+### Features
+
+* **docs:** refined to use storybook ([d28e90c](https://github.com/React-XP/react-xp/commit/d28e90c6a09898f6e016f235b5105069e1b2c6a4))
+* **global:** added eventHub, visibility, useForceUpdate, modal and a draft of ui builder ([1aae03f](https://github.com/React-XP/react-xp/commit/1aae03f7a1404b61a4abb6d94f108013aa509fa8))
+* **global:** refined templates ([a1fe673](https://github.com/React-XP/react-xp/commit/a1fe673379321be81f87a1709f4955d09020ce38))
+* **ui:** added card, dialog, drawer, separator and tabs ([99403d8](https://github.com/React-XP/react-xp/commit/99403d89899bfe58ee07195bc5d16a1cc16b37ca))
+* **ui:** added more components ([669fd31](https://github.com/React-XP/react-xp/commit/669fd31123a2dab12a38470efdb0b2b9e0365114))
+* **ui:** added spacer ([0bc56ef](https://github.com/React-XP/react-xp/commit/0bc56ef9c3648f56ef466a0580db3afcfb4563c8))
+* **ui:** draft version of ui components based on daisy ui ([0f5a9a1](https://github.com/React-XP/react-xp/commit/0f5a9a198f23bca68bc518cfaac21393456fc3d4))
+* **ui:** refined tailwind ui components lib from radix-ui to daisyui ([2ac9316](https://github.com/React-XP/react-xp/commit/2ac93160bdecd35b0aff6377308e33b2872b9125))
+
 # [1.0.0-beta.16](https://github.com/React-XP/react-xp/compare/v1.0.0-beta.15...v1.0.0-beta.16) (2024-06-20)
 
 
