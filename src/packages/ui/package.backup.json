@@ -1,0 +1,115 @@
+{
+  "name": "@react-xp/ui",
+  "description": "This is a React Experience UI components",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/"
+  ],
+  "exports": {
+    "./accordion": {
+      "source": "./src/components/accordion/index.ts",
+      "default": "./dist/components/accordion/index.js"
+    },
+    "./as": {
+      "source": "./src/components/as/index.ts",
+      "default": "./dist/components/as/index.js"
+    },
+    "./box": {
+      "source": "./src/components/box/index.ts",
+      "default": "./dist/components/box/index.js"
+    },
+    "./button": {
+      "source": "./src/components/button/index.ts",
+      "default": "./dist/components/button/index.js"
+    },
+    "./card": {
+      "source": "./src/components/card/index.ts",
+      "default": "./dist/components/card/index.js"
+    },
+    "./column": {
+      "source": "./src/components/column/index.ts",
+      "default": "./dist/components/column/index.js"
+    },
+    "./divider": {
+      "source": "./src/components/divider/index.ts",
+      "default": "./dist/components/divider/index.js"
+    },
+    "./drawer": {
+      "source": "./src/components/drawer/index.ts",
+      "default": "./dist/components/drawer/index.js"
+    },
+    "./dropdown": {
+      "source": "./src/components/dropdown/index.ts",
+      "default": "./dist/components/dropdown/index.js"
+    },
+    "./menu": {
+      "source": "./src/components/menu/index.ts",
+      "default": "./dist/components/menu/index.js"
+    },
+    "./modal": {
+      "source": "./src/components/modal/index.ts",
+      "default": "./dist/components/modal/index.js"
+    },
+    "./row": {
+      "source": "./src/components/row/index.ts",
+      "default": "./dist/components/row/index.js"
+    },
+    "./tabs": {
+      "source": "./src/components/tabs/index.ts",
+      "default": "./dist/components/tabs/index.js"
+    },
+    "./themeController": {
+      "source": "./src/components/themeController/index.ts",
+      "default": "./dist/components/themeController/index.js"
+    },
+    "./typography": {
+      "source": "./src/components/typography/index.ts",
+      "default": "./dist/components/typography/index.js"
+    }
+  },
+  "scripts": {
+    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
+    "build": "tsc --project tsconfig.build.json",
+    "check": "biome check --write",
+    "dev": "nodemon --watch src --exec 'pnpm run build'",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "lucide-react": "^0.395.0"
+  },
+  "peerDependencies": {
+    "@react-xp/core": "*",
+    "@react-xp/theme": "*",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.0",
+    "@glzr/semantic-release-npm": "^1.5.0",
+    "@react-xp/core": "workspace:*",
+    "@react-xp/theme": "workspace:*",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.6",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "nodemon": "^3.1.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^5.0.7",
+    "semantic-release": "^24.0.0",
+    "typescript": "^5.4.2"
+  },
+  "keywords": [
+    "react",
+    "experience",
+    "components",
+    "ui"
+  ]
+}

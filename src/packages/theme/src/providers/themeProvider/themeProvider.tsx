@@ -1,9 +1,11 @@
 import React from 'react';
-import { type TTheme, ThemeContext } from '../../contexts/themeContext';
+import { theme } from '../../constants/theme';
+import { ThemeContext } from '../../contexts/themeContext';
+import type { TAvailableTheme } from '../../types/theme';
 
 type TThemeProviderProps = {
   children: React.ReactNode;
-  defaultTheme?: TTheme;
+  defaultTheme?: TAvailableTheme;
   storageKey?: string;
 };
 
@@ -12,8 +14,8 @@ export const ThemeProvider = ({
   defaultTheme = 'light',
   storageKey = 'react-xp-theme',
 }: TThemeProviderProps) => {
-  const [theme, setTheme] = React.useState<TTheme>(
-    () => (localStorage.getItem(storageKey) as TTheme) || defaultTheme,
+  const [themeName, setThemeName] = React.useState<TAvailableTheme>(
+    () => (localStorage.getItem(storageKey) as TAvailableTheme) || defaultTheme,
   );
 
   React.useEffect(() => {
@@ -21,7 +23,7 @@ export const ThemeProvider = ({
 
     root.classList.remove('light', 'dark');
 
-    if (theme === 'system') {
+    if (themeName === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
         .matches
         ? 'dark'
@@ -31,14 +33,15 @@ export const ThemeProvider = ({
       return;
     }
 
-    root.classList.add(theme);
-  }, [theme]);
+    root.classList.add(themeName);
+  }, [themeName]);
 
   const providerValue = {
-    theme,
-    setTheme: (theme: TTheme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
+    theme: theme,
+    themeName,
+    setThemeName: (themeName: TAvailableTheme) => {
+      localStorage.setItem(storageKey, themeName);
+      setThemeName(themeName);
     },
   };
 

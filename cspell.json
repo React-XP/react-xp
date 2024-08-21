@@ -15,7 +15,9 @@
     "Antd",
     "flexboxgrid",
     "Avenir",
-    "shadcn"
+    "daisyui",
+    "rsbuild",
+    "zustand"
   ],
   "flagWords": [],
   "ignorePaths": [
@@ -44,7 +46,8 @@
     "**/dist/**",
     "**/externalLibs/**",
     "**/i18n/**",
-    "**/__stories/**"
+    "**/__stories/**",
+    "**/stories/**"
   ],
   "maxNumberOfProblems": 100,
   "allowCompoundWords": false,

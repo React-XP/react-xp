@@ -1,27 +1,115 @@
 {
-  "name": "@react-xp/new-package-name",
+  "name": "@react-xp/new-package",
+  "description": "This is a boilerplate to create new packages for React XP.",
   "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/"
+  ],
   "exports": {
+    "./accordion": {
+      "source": "./src/components/accordion/index.ts",
+      "default": "./dist/components/accordion/index.js"
+    },
     "./box": {
       "source": "./src/components/box/index.ts",
       "default": "./dist/components/box/index.js"
+    },
+    "./button": {
+      "source": "./src/components/button/index.ts",
+      "default": "./dist/components/button/index.js"
+    },
+    "./card": {
+      "source": "./src/components/card/index.ts",
+      "default": "./dist/components/card/index.js"
+    },
+    "./dialog": {
+      "source": "./src/components/dialog/index.ts",
+      "default": "./dist/components/dialog/index.js"
+    },
+    "./drawer": {
+      "source": "./src/components/drawer/index.ts",
+      "default": "./dist/components/drawer/index.js"
+    },
+    "./dropdown-menu": {
+      "source": "./src/components/dropdownMenu/index.ts",
+      "default": "./dist/components/dropdownMenu/index.js"
+    },
+    "./list-item": {
+      "source": "./src/components/listItem/index.ts",
+      "default": "./dist/components/listItem/index.js"
+    },
+    "./navigation-menu": {
+      "source": "./src/components/navigationMenu/index.ts",
+      "default": "./dist/components/navigationMenu/index.js"
+    },
+    "./separator": {
+      "source": "./src/components/separator/index.ts",
+      "default": "./dist/components/separator/index.js"
+    },
+    "./tabs": {
+      "source": "./src/components/tabs/index.ts",
+      "default": "./dist/components/tabs/index.js"
+    },
+    "./theme-toggle": {
+      "source": "./src/components/themeToggle/index.ts",
+      "default": "./dist/components/themeToggle/index.js"
+    },
+    "./typography": {
+      "source": "./src/components/typography/index.ts",
+      "default": "./dist/components/typography/index.js"
     }
   },
   "scripts": {
-    "build": "rimraf dist && tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
+    "build": "tsc --project tsconfig.build.json",
     "check": "biome check --write",
     "dev": "rimraf dist && tsc --watch",
     "format": "biome format --write"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.0",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-separator": "^1.1.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "install": "^0.13.0",
+    "lucide-react": "^0.395.0",
+    "vaul": "^0.9.1"
+  },
+  "peerDependencies": {
+    "@react-xp/core": "*",
+    "@react-xp/theme": "*",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
+    "@glzr/semantic-release-npm": "^1.5.0",
+    "@react-xp/core": "workspace:*",
+    "@react-xp/theme": "workspace:*",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.6",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "rimraf": "^5.0.7",
+    "semantic-release": "^24.0.0",
     "typescript": "^5.4.2"
-  }
+  },
+  "keywords": [
+    "react",
+    "experience",
+    "components",
+    "ui"
+  ]
 }

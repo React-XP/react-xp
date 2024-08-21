@@ -23,5 +23,6 @@
       "path": "../theme"
     }
   ],
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["**/**/__tests__/**", "**/**/__stories__/**", "**/**/*.stories.*"]
 }

@@ -9,6 +9,14 @@
     "dist/"
   ],
   "exports": {
+    "./themeProvider": {
+      "source": "./src/providers/themeProvider/index.ts",
+      "default": "./dist/providers/themeProvider/index.js"
+    },
+    "./useBreakpoint": {
+      "source": "./src/hooks/useBreakpoint/index.ts",
+      "default": "./dist/hooks/useBreakpoint/index.js"
+    },
     "./useTheme": {
       "source": "./src/hooks/useTheme/index.ts",
       "default": "./dist/hooks/useTheme/index.js"
@@ -16,46 +24,50 @@
     "./tailwind": {
       "source": "./src/modules/tailwind/index.ts",
       "default": "./dist/modules/tailwind/index.js"
-    },
-    "./tailwind-config": {
-      "source": "./src/modules/tailwind/tailwind.config.ts",
-      "default": "./dist/modules/tailwind/tailwind.config.js"
-    },
-    "./theme-provider": {
-      "source": "./src/providers/themeProvider/index.ts",
-      "default": "./dist/providers/themeProvider/index.js"
     }
   },
   "scripts": {
     "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
     "build": "tsc --project tsconfig.build.json",
     "check": "biome check --write",
-    "dev": "rimraf dist && tsc --watch",
+    "dev": "nodemon --watch src --exec 'pnpm run build'",
     "format": "biome format --write"
   },
   "peerDependencies": {
     "@react-xp/core": "*",
+    "daisyui": "^4.12.10",
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-native": "^0.74.5",
+    "tailwindcss": "^3.4.4",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
     "@glzr/semantic-release-npm": "^1.5.0",
     "@react-xp/core": "workspace:*",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^10.0.6",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "nodemon": "^3.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-native": "^0.74.5",
     "rimraf": "^5.0.7",
     "semantic-release": "^24.0.0",
-    "tailwindcss": "^3.4.4",
-    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.2"
   },
   "keywords": [

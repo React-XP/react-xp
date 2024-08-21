@@ -1,32 +1,38 @@
 // biome-ignore lint/style/useImportType: <explanation>
 import React from 'react';
-import { Accordion as AccordionPrimitive } from './primitives/accordion';
-import { AccordionContent } from './primitives/accordionContent';
-import { AccordionItem } from './primitives/accordionItem';
-import { AccordionTrigger } from './primitives/accordionTrigger';
 
-export interface AccordionProps {
-  items: { title: React.ReactNode; content: React.ReactNode }[];
-}
+type TAccordionProps = {
+  items: {
+    title: React.ReactNode;
+    content: React.ReactNode;
+    checked?: boolean;
+  }[];
+};
 
-export const Accordion = (props: AccordionProps) => {
+export const Accordion = (props: TAccordionProps) => {
   const { items } = props;
-  const isSingle = items.length > 1;
 
   return (
-    <AccordionPrimitive type={isSingle ? 'single' : 'multiple'} collapsible>
+    <>
       {items.map((item, index) => (
-        <AccordionItem
-          value={`item-${index}`}
-          key={`item-${
+        <div
+          key={`accordion-${
             // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
             index
           }`}
+          className="collapse bg-base-200"
         >
-          <AccordionTrigger>{item.title}</AccordionTrigger>
-          <AccordionContent>{item.content}</AccordionContent>
-        </AccordionItem>
+          <input
+            type="radio"
+            name="my-accordion-1"
+            defaultChecked={item.checked}
+          />
+          <div className="collapse-title text-xl font-medium">{item.title}</div>
+          <div className="collapse-content">{item.content}</div>
+        </div>
       ))}
-    </AccordionPrimitive>
+    </>
   );
 };
+
+Accordion.displayName = 'Accordion';

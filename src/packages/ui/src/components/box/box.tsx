@@ -1,15 +1,38 @@
-import { cn } from '@react-xp/core/tailwind';
+import { type VariantProps, cn, cva } from '@react-xp/core/tailwind';
+import React from 'react';
+import type { TComponentBaseProps } from '../../types/components';
 
-type TBoxProps = {
-  className?: string;
-  children?: React.ReactNode;
-  dir?: 'horizontal' | 'vertical';
-};
+const boxVariants = cva('flex', {
+  variants: {
+    orientation: {
+      horizontal: 'flex-row',
+      vertical: 'flex-col',
+    },
+  },
+  defaultVariants: {
+    orientation: 'horizontal',
+  },
+});
 
-export const Box = ({ className, children, dir = 'vertical' }: TBoxProps) => {
-  const directionClassName = dir === 'horizontal' ? 'flex-row' : 'flex-col';
+type TBoxProps = VariantProps<typeof boxVariants> &
+  TComponentBaseProps & {
+    id?: string;
+    orientation?: 'horizontal' | 'vertical';
+    ref?: React.RefObject<HTMLDivElement | null>;
+  };
 
-  return (
-    <div className={cn('flex', directionClassName, className)}>{children}</div>
-  );
-};
+export const Box = React.forwardRef(
+  ({ className, children, id, orientation = 'horizontal' }: TBoxProps, ref) => {
+    return (
+      <div
+        className={cn(boxVariants({ orientation }), className)}
+        id={id}
+        ref={ref as React.LegacyRef<HTMLDivElement>}
+      >
+        {children}
+      </div>
+    );
+  },
+);
+
+Box.displayName = 'Box';

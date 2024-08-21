@@ -1,14 +1,19 @@
 {
-  "name": "@react-xp/new-app-name",
+  "name": "@react-xp/new-app",
+  "description": "This is a boilerplate to create new apps for React XP.",
   "version": "0.0.0",
   "scripts": {
     "build": "rsbuild build",
     "check": "biome check --write",
     "dev": "rsbuild dev --open",
     "format": "biome format --write",
-    "preview": "rsbuild preview"
+    "preview": "rsbuild preview",
+    "test": "node test.js"
   },
   "dependencies": {
+    "@react-xp/core": "workspace:*",
+    "@react-xp/theme": "workspace:*",
+    "@react-xp/ui": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -17,8 +22,11 @@
     "@rsbuild/core": "^0.7.7",
     "@rsbuild/plugin-react": "^0.7.7",
     "@rsbuild/plugin-source-build": "^0.7.7",
+    "@tanstack/router-devtools": "^1.39.4",
     "@types/react": "^18.3.3",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.3.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "typescript": "^5.4.2"
   }
 }

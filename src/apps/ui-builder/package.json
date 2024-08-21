@@ -1,23 +1,35 @@
 {
   "name": "@react-xp/ui-builder",
+  "description": "This is an app to build UI components for React XP.",
   "version": "0.0.0",
   "scripts": {
     "build": "rsbuild build",
     "check": "biome check --write",
-    "dev2": "rsbuild dev --open",
+    "dev": "rsbuild dev --open",
     "format": "biome format --write",
-    "preview": "rsbuild preview"
+    "preview": "rsbuild preview",
+    "test": "node test.js"
   },
   "dependencies": {
+    "@react-xp/core": "workspace:*",
+    "@react-xp/theme": "workspace:*",
+    "@react-xp/ui": "workspace:*",
+    "lucide-react": "^0.395.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.3.1",
+    "react-draggable": "^4.4.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
     "@rsbuild/core": "^0.7.7",
     "@rsbuild/plugin-react": "^0.7.7",
+    "@rsbuild/plugin-source-build": "^0.7.7",
     "@types/react": "^18.3.3",
+    "@types/react-copy-to-clipboard": "^5.0.7",
     "@types/react-dom": "^18.3.0",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "typescript": "^5.4.2"
   }
 }

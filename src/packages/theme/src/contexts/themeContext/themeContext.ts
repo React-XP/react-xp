@@ -1,14 +1,15 @@
 import React from 'react';
-import type { AVAILABLE_THEMES } from '../../constants/theme';
-
-export type TTheme = (typeof AVAILABLE_THEMES)[number];
+import { theme } from '../../constants/theme';
+import type { TAvailableTheme, TTheme } from '../../types/theme';
 
 type TThemeContext = {
   theme: TTheme;
-  setTheme: (theme: TTheme) => void;
+  themeName: TAvailableTheme;
+  setThemeName: (theme: TAvailableTheme) => void;
 };
 
 export const ThemeContext = React.createContext<TThemeContext>({
-  theme: 'light',
-  setTheme: () => {},
+  theme: theme,
+  themeName: 'light',
+  setThemeName: () => {},
 });

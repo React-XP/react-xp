@@ -18,14 +18,16 @@ const watchingForChanges = () => {
   console.log('Watching for changes in packages...');
 
   for (watchFolder of WATCH_FOLDERS) {
-    fs.watch(watchFolder.path, { recursive: true }, (eventType, fileName) => {
-      console.log(`Detected changes in "${fileName}"`);
+    const name = watchFolder.name;
+    const path = watchFolder.path;
+    fs.watch(path, { recursive: true }, (eventType, fileName) => {
+      console.log(`Detected changes in "${fileName} for package "${name}`);
       // if (eventType === 'rename') {
       //   console.log(`${fileName} was added/deleted`);
       // } else {
       //   console.log(`${fileName} was updated`);
       // }
-      runningBuildPackages(watchFolder.name);
+      runningBuildPackages(name);
     });
   }
 };
