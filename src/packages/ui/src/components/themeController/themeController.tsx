@@ -1,7 +1,7 @@
 import { useTheme } from '@react-xp/theme/useTheme';
 
 export const ThemeController = () => {
-  const { availableThemes, setTheme } = useTheme();
+  const { availableThemes, setThemeName } = useTheme();
 
   return (
     <div className="dropdown mb-72">
@@ -21,7 +21,7 @@ export const ThemeController = () => {
       <ul className="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl">
         {availableThemes.map((item, index) => (
           // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
-          <li key={item} onClick={() => setTheme(item)}>
+          <li key={item} onClick={() => setThemeName(item)}>
             <input
               type="radio"
               name="theme-dropdown"

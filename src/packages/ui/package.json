@@ -57,6 +57,10 @@
       "source": "./src/components/row/index.ts",
       "default": "./dist/components/row/index.js"
     },
+    "./spacer": {
+      "source": "./src/components/spacer/index.ts",
+      "default": "./dist/components/spacer/index.js"
+    },
     "./tabs": {
       "source": "./src/components/tabs/index.ts",
       "default": "./dist/components/tabs/index.js"
@@ -84,7 +88,20 @@
     "@react-xp/core": "*",
     "@react-xp/theme": "*",
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "react-native": "^0.74.5",
+    "react-native-paper": "^5.12.5"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    },
+    "react-native-paper": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
@@ -104,6 +121,8 @@
     "nodemon": "^3.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-native": "^0.74.5",
+    "react-native-paper": "^5.12.5",
     "rimraf": "^5.0.7",
     "semantic-release": "^24.0.0",
     "typescript": "^5.4.2"
