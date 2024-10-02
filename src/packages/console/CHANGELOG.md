@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](https://github.com/React-XP/react-xp/compare/console-v1.0.0-beta.1...console-v1.0.0-beta.2) (2024-10-02)
+
+
+### Features
+
+* **console:** improved docs ([7bbbaa3](https://github.com/React-XP/react-xp/commit/7bbbaa369311381869641fee9eb08e4c1a03f16a))
+
 # 1.0.0-beta.1 (2024-10-02)
 
 
