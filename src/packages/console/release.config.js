@@ -6,7 +6,7 @@ module.exports = {
       prerelease: 'beta',
     },
   ],
-  tagFormat: 'core-v${version}',
+  tagFormat: 'console-v${version}',
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
