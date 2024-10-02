@@ -22,11 +22,3 @@ export const ConsoleProvider = ({
     </ConsoleContext.Provider>
   );
 };
-
-const A = () => {
-  return (
-    <ConsoleProvider debug={true} log={{ '*': true, test: false }} warn={true}>
-      test
-    </ConsoleProvider>
-  );
-};
