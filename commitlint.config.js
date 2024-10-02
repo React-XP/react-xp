@@ -23,7 +23,16 @@ module.exports = {
     'scope-enum': [
       2,
       'always',
-      ['global', 'docs', 'showcase', 'ui-builder', 'theme', 'ui', 'release'],
+      [
+        'global',
+        'docs',
+        'showcase',
+        'ui-builder',
+        'theme',
+        'ui',
+        'release',
+        'console',
+      ],
     ],
     'body-max-line-length': [0, 'never'],
   },
