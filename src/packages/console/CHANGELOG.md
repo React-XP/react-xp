@@ -1,3 +1,15 @@
+# [1.0.0-beta.3](https://github.com/React-XP/react-xp/compare/console-v1.0.0-beta.2...console-v1.0.0-beta.3) (2024-10-04)
+
+
+### Bug Fixes
+
+* **console:** sync deps lock ([0c760c7](https://github.com/React-XP/react-xp/commit/0c760c7113b51a763f3d7fedbca43a7f5f904015))
+
+
+### Features
+
+* **console:** refined console package to allow disable log ([262e66c](https://github.com/React-XP/react-xp/commit/262e66c674e2002262fca38ea1438e02449d8b65))
+
 # [1.0.0-beta.2](https://github.com/React-XP/react-xp/compare/console-v1.0.0-beta.1...console-v1.0.0-beta.2) (2024-10-02)
 
 
