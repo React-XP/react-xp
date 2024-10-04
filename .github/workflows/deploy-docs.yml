@@ -6,6 +6,7 @@ on:
       - develop
     paths:
       - src/apps/docs/*
+      - src/packages/*
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -29,17 +30,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Build package core
-        working-directory: ./src/packages/core
-        run: pnpm run build
+      - name: Build all packages
+        run: pnpm run build:packages
 
-      - name: Build package theme
-        working-directory: ./src/packages/theme
-        run: pnpm run build
+      # - name: Build package core
+      #   working-directory: ./src/packages/core
+      #   run: pnpm run build
 
-      - name: Build package ui
-        working-directory: ./src/packages/ui
-        run: pnpm run build
+      # - name: Build package theme
+      #   working-directory: ./src/packages/theme
+      #   run: pnpm run build
+
+      # - name: Build package ui
+      #   working-directory: ./src/packages/ui
+      #   run: pnpm run build
 
       #   - name: Set up .env
       #     run: |
@@ -53,6 +57,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v1
         with:
           target_brach: gh-pages
-          build_dir: src/apps/docs/dist
+          build_dir: src/apps/docs/storybook-static
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
