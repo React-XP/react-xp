@@ -14,6 +14,7 @@ dist
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
@@ -25,27 +26,19 @@ yarn-error.log*
 
 .idea
 
-src/react-app-env.d.ts
 /.vscode
 /.vs
 .favorites.json
 /.scannerwork
 test-report.xml
 
-/src/apps/*/node_modules
-/src/apps/*/build
-/src/apps/*/coverage
-/src/apps/*/dist
-
-/src/packages/*/node_modules
-/src/packages/*/build
-/src/packages/*/coverage
-/src/packages/*/dist
+**/node_modules
+**/build
+**/coverage
+**/dist
+**/react-app-env.d.ts
 
 *.tsbuildinfo
 
-/storybook-static
-
-/docs
-
-.env
+storybook-static
+**/storybook-static

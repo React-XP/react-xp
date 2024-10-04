@@ -8,15 +8,17 @@ type TConsoleProviderProps = TConsoleContext & {
 export const ConsoleProvider = ({
   children,
   debug,
+  error,
   log,
   warn,
   onDebug,
+  onError,
   onLog,
   onWarn,
 }: TConsoleProviderProps) => {
   return (
     <ConsoleContext.Provider
-      value={{ debug, log, warn, onDebug, onLog, onWarn }}
+      value={{ debug, error, log, warn, onDebug, onError, onLog, onWarn }}
     >
       {children}
     </ConsoleContext.Provider>
