@@ -1,63 +1,40 @@
 {
-  "name": "@react-xp/new-package",
-  "description": "This is a React Experience new package",
+  "name": "@react-xp/<package-name>",
+  "description": "This is a React Experience <package-name> package",
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist/"
-  ],
-  "exports": {
-    "./console": {
-      "source": "./src/modules/console/index.ts",
-      "default": "./dist/modules/console/index.js"
-    }
-  },
+  "files": ["dist/"],
   "scripts": {
-    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
-    "build": "tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && pnpm run build",
+    "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "release": "semantic-release -e semantic-release-monorepo"
   },
-  "dependencies": {},
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
-    "react-native": "^0.74.5"
-  },
-  "peerDependenciesMeta": {
-    "react-dom": {
-      "optional": true
-    },
-    "react-native": {
-      "optional": true
-    }
+    "react": "^18.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.0",
     "@glzr/semantic-release-npm": "^1.5.0",
+    "@react-xp/theme": "workspace:*",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^10.0.6",
+    "@semantic-release/github": "^11.0.0",
     "@semantic-release/npm": "^12.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "nodemon": "^3.1.4",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "@storybook/react": "^8.3.5",
+    "@types/react": "^18.3.11",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-native": "^0.74.5",
-    "rimraf": "^5.0.7",
-    "semantic-release": "^24.0.0",
-    "typescript": "^5.4.2"
+    "rimraf": "^6.0.1",
+    "semantic-release": "^24.1.2",
+    "semantic-release-monorepo": "^8.0.2",
+    "typescript": "^5.6.2"
   },
-  "keywords": [
-    "react",
-    "experience",
-    "console",
-    "logger"
-  ]
+  "keywords": ["react", "experience", "<package-name>"]
 }

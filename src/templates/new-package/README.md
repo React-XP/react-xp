@@ -1,3 +1,3 @@
-# New package boilerplate
+# <package-name>
 
-<description>
+This is a React Experience <package-name> package

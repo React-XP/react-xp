@@ -1,3 +1,2 @@
-const tailwindConfig = require('./tailwind.config');
-
-module.exports = tailwindConfig;
+export * from './tailwind.helper';
+export * from './tailwind.config';

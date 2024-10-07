@@ -5,21 +5,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "exports": {
-    "./console": {
-      "source": "./src/modules/console/index.ts",
-      "default": "./dist/modules/console/index.js"
-    },
     "./eventHub": {
       "source": "./src/modules/eventHub/index.ts",
       "default": "./dist/modules/eventHub/index.js"
-    },
-    "./tailwind": {
-      "source": "./src/modules/tailwind/index.ts",
-      "default": "./dist/modules/tailwind/index.js"
     },
     "./visibility": {
       "source": "./src/modules/visibility/index.ts",
@@ -43,8 +33,8 @@
     }
   },
   "scripts": {
-    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
-    "build": "tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && pnpm run build",
+    "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
     "format": "biome format --write"
@@ -79,6 +69,7 @@
     "@semantic-release/release-notes-generator": "^14.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "copyfiles": "^2.4.1",
     "nodemon": "^3.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -87,10 +78,5 @@
     "semantic-release": "^24.0.0",
     "typescript": "^5.4.2"
   },
-  "keywords": [
-    "react",
-    "experience",
-    "components",
-    "utilities"
-  ]
+  "keywords": ["react", "experience", "components", "utilities"]
 }
