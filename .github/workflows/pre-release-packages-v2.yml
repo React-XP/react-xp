@@ -1,0 +1,118 @@
+name: Pre-release packages
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
+    paths:
+      - src/packages/core/*
+      - src/packages/console/*
+      - src/packages/test/*
+      - src/packages/theme/*
+      - src/packages/ui/*
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      # - name: Run tests
+      #   run: pnpm run test
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm run release
+
+      # - name: Nothing to release
+      #   if: ${{ env.NEXT_RELEASE_VERSION == '' }}
+      #   uses: actions/github-script@v7
+      #   with:
+      #     script: |
+      #       core.setFailed('Nothing to release')
+
+      # - name: Set up .npmrc
+      #   run: |
+      #     echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}' > .npmrc
+
+      # # <Core package>
+      # - name: update package.json version
+      #   uses: jaywcjlove/github-action-package@main
+      #   with:
+      #     path: ./src/packages/core/package.json
+      #     data: |
+      #       {
+      #         "version": "${{env.NEXT_RELEASE_VERSION}}"
+      #       }
+
+      # - name: Run build
+      #   working-directory: ./src/packages/core
+      #   run: pnpm run build
+
+      # - name: Publish
+      #   working-directory: ./src/packages/core
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: pnpm publish --no-git-checks --access public --tag latest
+      # # </Core package>
+
+      # # <Theme package>
+      # - name: update package.json version
+      #   uses: jaywcjlove/github-action-package@main
+      #   with:
+      #     path: ./src/packages/theme/package.json
+      #     data: |
+      #       {
+      #         "version": "${{env.NEXT_RELEASE_VERSION}}"
+      #       }
+
+      # - name: Run build
+      #   working-directory: ./src/packages/theme
+      #   run: pnpm run build
+
+      # - name: Publish
+      #   working-directory: ./src/packages/theme
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: pnpm publish --no-git-checks --access public --tag latest
+      # # </Theme package>
+
+      # # <Ui package>
+      # - name: update package.json version
+      #   uses: jaywcjlove/github-action-package@main
+      #   with:
+      #     path: ./src/packages/ui/package.json
+      #     data: |
+      #       {
+      #         "version": "${{env.NEXT_RELEASE_VERSION}}"
+      #       }
+
+      # - name: Run build
+      #   working-directory: ./src/packages/ui
+      #   run: pnpm run build
+
+      # - name: Publish
+      #   working-directory: ./src/packages/ui
+      #   env:
+      #     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   run: pnpm publish --no-git-checks --access public --tag latest
+      # # </Ui package>

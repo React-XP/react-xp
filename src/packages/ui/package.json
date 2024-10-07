@@ -5,9 +5,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "exports": {
     "./accordion": {
       "source": "./src/components/accordion/index.ts",
@@ -75,8 +73,8 @@
     }
   },
   "scripts": {
-    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
-    "build": "tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && pnpm run build",
+    "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
     "format": "biome format --write"
@@ -118,6 +116,7 @@
     "@storybook/test": "^8.2.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "copyfiles": "^2.4.1",
     "nodemon": "^3.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -127,10 +126,5 @@
     "semantic-release": "^24.0.0",
     "typescript": "^5.4.2"
   },
-  "keywords": [
-    "react",
-    "experience",
-    "components",
-    "ui"
-  ]
+  "keywords": ["react", "experience", "components", "ui"]
 }

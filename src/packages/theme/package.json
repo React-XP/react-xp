@@ -1,13 +1,11 @@
 {
   "name": "@react-xp/theme",
-  "description": "This is a React Experience theme",
+  "description": "This is a React Experience theme package",
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "exports": {
     "./themeProvider": {
       "source": "./src/providers/themeProvider/index.ts",
@@ -27,53 +25,49 @@
     }
   },
   "scripts": {
-    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
-    "build": "tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && pnpm run build",
+    "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
     "format": "biome format --write"
   },
   "peerDependencies": {
-    "@react-xp/core": "*",
-    "daisyui": "^4.12.10",
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
-    "react-native": "^0.74.5",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.1",
+    "react": "^18.0.0",
+    "react-native": "^0.75.4",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "peerDependenciesMeta": {
-    "react-dom": {
-      "optional": true
-    },
     "react-native": {
       "optional": true
     }
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.0",
+    "@biomejs/biome": "^1.9.3",
     "@glzr/semantic-release-npm": "^1.5.0",
-    "@react-xp/core": "workspace:*",
+    "@react-xp/biome-config": "workspace:*",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^10.0.6",
+    "@semantic-release/github": "^11.0.0",
     "@semantic-release/npm": "^12.0.1",
-    "@semantic-release/release-notes-generator": "^14.0.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "nodemon": "^3.1.4",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "@types/react": "^18.3.11",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-native": "^0.74.5",
-    "rimraf": "^5.0.7",
-    "semantic-release": "^24.0.0",
-    "typescript": "^5.4.2"
+    "react-native": "^0.75.4",
+    "rimraf": "^6.0.1",
+    "semantic-release": "^24.1.2",
+    "tailwind-merge": "^2.5.3",
+    "tailwindcss": "^3.4.13",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.6.2"
   },
-  "keywords": [
-    "react",
-    "experience",
-    "components",
-    "theme"
-  ]
+  "keywords": ["react", "experience", "components", "theme"]
 }

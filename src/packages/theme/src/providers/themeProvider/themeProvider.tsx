@@ -2,6 +2,7 @@ import React from 'react';
 import { theme } from '../../constants/theme';
 import { ThemeContext } from '../../contexts/themeContext';
 import type { TAvailableTheme } from '../../types/theme';
+import '../../assets/styles/global.css';
 
 type TThemeProviderProps = {
   children: React.ReactNode;

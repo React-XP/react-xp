@@ -1,24 +1,28 @@
 {
-  "name": "@react-xp/console",
-  "description": "This is a React Experience console package",
+  "name": "@react-xp/button",
+  "description": "This is a React Experience button package",
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
   "files": ["dist/"],
   "scripts": {
-    "build-clean": "rimraf dist && pnpm run build",
-    "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
+    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
+    "build": "tsc --project tsconfig.build.json",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
     "format": "biome format --write",
     "release": "semantic-release -e semantic-release-monorepo"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^18.0.0"
   },
   "devDependencies": {
     "@glzr/semantic-release-npm": "^1.5.0",
+    "@react-xp/theme": "workspace:*",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
@@ -35,5 +39,5 @@
     "semantic-release-monorepo": "^8.0.2",
     "typescript": "^5.6.2"
   },
-  "keywords": ["react", "experience", "console", "logger"]
+  "keywords": ["react", "experience", "button"]
 }

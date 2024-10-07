@@ -1,5 +1,5 @@
 {
-  "version": "1.0",
+  "version": "0.2",
   "language": "en",
   "words": [
     "sonarjs",
@@ -17,7 +17,9 @@
     "Avenir",
     "daisyui",
     "rsbuild",
-    "zustand"
+    "zustand",
+    "azdo",
+    "glzr"
   ],
   "flagWords": [],
   "ignorePaths": [

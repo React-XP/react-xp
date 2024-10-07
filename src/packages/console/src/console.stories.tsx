@@ -172,6 +172,6 @@ const meta: Meta<typeof ConsoleProvider> = {
 export default meta;
 type Story = StoryObj<typeof Console>;
 
-export const Example: Story = {
+export const HowToUse: Story = {
   render: () => <Console />,
 };
