@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@glzr/semantic-release-npm": "^1.5.0",
+    "@react-xp/release-config": "workspace:*",
     "@react-xp/theme": "workspace:*",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
