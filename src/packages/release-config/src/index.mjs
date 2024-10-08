@@ -1,4 +1,4 @@
-const { packages } = require('../../../../repo.config.mjs');
+import { packages } from '../../../../repo.config.mjs';
 
 const allPackageNames = packages
   .filter((pkg) => pkg.publish)
