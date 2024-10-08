@@ -12,7 +12,7 @@
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
     "format": "biome format --write",
-    "release": "semantic-release -e semantic-release-monorepo"
+    "release": "semantic-release"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0"
@@ -30,7 +30,9 @@
     "@semantic-release/github": "^11.0.0",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.1",
+    "@storybook/addon-actions": "^8.3.5",
     "@storybook/react": "^8.3.5",
+    "@storybook/test": "^8.3.5",
     "@types/react": "^18.3.11",
     "copyfiles": "^2.4.1",
     "nodemon": "^3.1.7",

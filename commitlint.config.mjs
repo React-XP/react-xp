@@ -1,3 +1,7 @@
+import { packages } from './repo.config.mjs';
+
+const scopes = packages.map((pkg) => pkg.name);
+
 export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
@@ -20,11 +24,7 @@ export default {
       ],
     ],
     'scope-empty': [2, 'never'],
-    'scope-enum': [
-      2,
-      'always',
-      ['global', 'docs', 'ui-builder', 'button', 'console', 'theme'],
-    ],
+    'scope-enum': [2, 'always', ['global', 'docs', ...scopes]],
     'body-max-line-length': [0, 'never'],
   },
 };

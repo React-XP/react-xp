@@ -28,10 +28,11 @@
     "git:pre-commit": "lint-staged --no-stash",
     "git:pre-push": "pnpm run build && pnpm run test:coverage",
     "update:packages-exports": "node ./scripts/packages-update-packagejson-exports.js",
-    "release": "pnpm --filter \"./src/packages/**\" run release",
+    "release": "pnpm --workspace-concurrency=1 --filter \"./src/packages/**\" run release",
     "biome:format": "biome format --write src/**/*.{js,ts,tsx}",
     "biome:lint": "biome lint --apply src/**/*.{js,ts,tsx}",
-    "packages:new": "node --loader ts-node/esm ./scripts/packages-new.ts"
+    "packages:new": "node --loader ts-node/esm ./scripts/packages-new.ts",
+    "t": "node --loader ts-node/esm ./scripts/utils.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
