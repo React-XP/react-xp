@@ -2,6 +2,7 @@ import { withThemeByClassName } from '@storybook/addon-themes';
 import type { Preview } from '@storybook/react';
 import React from 'react';
 import { ThemeProvider } from '@react-xp/theme/themeProvider';
+import { action } from '@storybook/addon-actions';
 
 export const decorators = [
   withThemeByClassName({
@@ -43,12 +44,16 @@ export const decorators = [
 
 const preview: Preview = {
   parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
     },
+  },
+  args: {
+    onClick: action('on-click'),
   },
 };
 

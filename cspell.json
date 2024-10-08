@@ -19,7 +19,9 @@
     "rsbuild",
     "zustand",
     "azdo",
-    "glzr"
+    "glzr",
+    "conventionalcommits",
+    "jcoreio"
   ],
   "flagWords": [],
   "ignorePaths": [
