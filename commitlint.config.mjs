@@ -24,7 +24,7 @@ export default {
       ],
     ],
     'scope-empty': [2, 'never'],
-    'scope-enum': [2, 'always', ['global', 'docs', ...scopes]],
+    'scope-enum': [2, 'always', ['pipeline', 'docs', ...scopes]],
     'body-max-line-length': [0, 'never'],
   },
 };
