@@ -30,18 +30,18 @@ export const makeSubPackageReleaseConfig = (packageName) => {
               scope,
               release: false,
             })),
-            // ...[
-            //   // allow commits like fix(packageName): ... to trigger a release in this package
-            //   packageName,
-            //   // scope: undefined allows unscoped commits like fix: ... to trigger a release in all monorepo pkgs
-            //   undefined,
-            // ].flatMap((scope) => [
-            //   { breaking: true, scope, release: 'major' },
-            //   { revert: true, scope, release: 'patch' },
-            //   { type: 'feat', scope, release: 'minor' },
-            //   { type: 'fix', scope, release: 'patch' },
-            //   { type: 'perf', scope, release: 'patch' },
-            // ]),
+            ...[
+              // allow commits like fix(packageName): ... to trigger a release in this package
+              packageName,
+              // scope: undefined allows unscoped commits like fix: ... to trigger a release in all monorepo pkgs
+              undefined,
+            ].flatMap((scope) => [
+              { breaking: true, scope, release: 'major' },
+              { revert: true, scope, release: 'patch' },
+              { type: 'feat', scope, release: 'minor' },
+              { type: 'fix', scope, release: 'patch' },
+              { type: 'perf', scope, release: 'patch' },
+            ]),
             // don't trigger a release for any other types of commits
             { scope: undefined, release: false },
           ],
@@ -90,14 +90,7 @@ export const makeSubPackageReleaseConfig = (packageName) => {
       //     changelogFile: 'CHANGELOG.md',
       //   },
       // ],
-      [
-        '@glzr/semantic-release-npm',
-        {
-          npmPublish: true,
-          tarballDir: 'dist',
-          packageManager: 'pnpm',
-        },
-      ],
+      '@jcoreio/semantic-release-npm',
     ],
   };
 };

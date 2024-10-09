@@ -23,14 +23,7 @@ module.exports = {
     //     tarballDir: 'dist',
     //   },
     // ],
-    [
-      '@glzr/semantic-release-npm',
-      {
-        npmPublish: true,
-        tarballDir: 'dist',
-        packageManager: 'pnpm',
-      },
-    ],
+    '@jcoreio/semantic-release-npm',
     [
       '@semantic-release/git',
       {
