@@ -84,7 +84,12 @@ export const makeSubPackageReleaseConfig = (packageName) => {
           },
         },
       ],
-      // '@jcoreio/semantic-release-npm',
+      [
+        '@semantic-release/changelog',
+        {
+          changelogFile: 'CHANGELOG.md',
+        },
+      ],
       [
         '@glzr/semantic-release-npm',
         {
@@ -93,52 +98,6 @@ export const makeSubPackageReleaseConfig = (packageName) => {
           packageManager: 'pnpm',
         },
       ],
-      // '@semantic-release/github',
-      // [
-      //   '@semantic-release/github',
-      //   {
-      //     assets: [{ path: 'dist/**' }],
-      //   },
-      // ],
     ],
-    // plugins: [
-    //   '@semantic-release/commit-analyzer',
-    //   '@semantic-release/release-notes-generator',
-    //   [
-    //     '@semantic-release/changelog',
-    //     {
-    //       changelogFile: 'CHANGELOG.md',
-    //     },
-    //   ],
-    //   // [
-    //   //   '@semantic-release/npm',
-    //   //   {
-    //   //     npmPublish: true,
-    //   //     tarballDir: 'dist',
-    //   //   },
-    //   // ],
-    //   [
-    //     '@glzr/semantic-release-npm',
-    //     {
-    //       npmPublish: true,
-    //       tarballDir: 'dist',
-    //       packageManager: 'pnpm',
-    //     },
-    //   ],
-    //   [
-    //     '@semantic-release/git',
-    //     {
-    //       assets: ['CHANGELOG.md'],
-    //       message:
-    //         'chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
-    //     },
-    //   ],
-    //   [
-    //     '@semantic-release/github',
-    //     {
-    //       assets: [{ path: 'dist/**' }],
-    //     },
-    //   ],
-    // ],
   };
 };
