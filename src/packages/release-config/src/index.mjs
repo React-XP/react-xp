@@ -84,13 +84,20 @@ export const makeSubPackageReleaseConfig = (packageName) => {
           },
         },
       ],
-      // [
-      //   '@semantic-release/changelog',
-      //   {
-      //     changelogFile: 'CHANGELOG.md',
-      //   },
-      // ],
-      '@jcoreio/semantic-release-npm',
+      [
+        '@semantic-release/changelog',
+        {
+          changelogFile: 'CHANGELOG.md',
+        },
+      ],
+      [
+        '@glzr/semantic-release-npm',
+        {
+          npmPublish: true,
+          tarballDir: 'dist',
+          packageManager: 'pnpm',
+        },
+      ],
     ],
   };
 };

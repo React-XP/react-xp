@@ -1,20 +1,18 @@
 {
-  "name": "@react-xp/button",
-  "description": "This is a React Experience button package",
+  "name": "@react-xp/test",
+  "description": "This is a React Experience test package",
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
   "files": ["dist/"],
   "scripts": {
-    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
-    "build": "tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && pnpm run build",
+    "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
-    "format": "biome format --write"
-  },
-  "dependencies": {
-    "@radix-ui/react-slot": "^1.1.0"
+    "format": "biome format --write",
+    "release": "semantic-release"
   },
   "peerDependencies": {
     "react": "^18.0.0"
@@ -40,10 +38,10 @@
     "rimraf": "^6.0.1",
     "semantic-release": "^24.1.2",
     "semantic-release-monorepo": "^8.0.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.2"
   },
   "overrides": {
     "conventional-changelog-conventionalcommits": ">= 8.0.0"
   },
-  "keywords": ["react", "experience", "button"]
+  "keywords": ["react", "experience", "test"]
 }
