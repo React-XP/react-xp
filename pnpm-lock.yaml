@@ -204,9 +204,6 @@ importers:
       '@react-xp/theme':
         specifier: workspace:*
         version: link:../../packages/theme
-      '@react-xp/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       react:
         specifier: ^18.3.1
         version: 18.3.1
