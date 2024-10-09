@@ -50,7 +50,6 @@ export const makeSubPackageReleaseConfig = (packageName) => {
       [
         '@semantic-release/release-notes-generator',
         {
-          changelogFile: 'CHANGELOG.md',
           preset: 'conventionalcommits',
           presetConfig: {
             types: [
