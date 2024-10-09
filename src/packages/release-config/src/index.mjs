@@ -85,8 +85,22 @@ export const makeSubPackageReleaseConfig = (packageName) => {
           },
         },
       ],
-      '@jcoreio/semantic-release-npm',
-      '@semantic-release/github',
+      // '@jcoreio/semantic-release-npm',
+      [
+        '@glzr/semantic-release-npm',
+        {
+          npmPublish: true,
+          tarballDir: 'dist',
+          packageManager: 'pnpm',
+        },
+      ],
+      // '@semantic-release/github',
+      [
+        '@semantic-release/github',
+        {
+          assets: [{ path: 'dist/**' }],
+        },
+      ],
     ],
     // plugins: [
     //   '@semantic-release/commit-analyzer',
