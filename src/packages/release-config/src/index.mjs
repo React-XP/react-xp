@@ -4,7 +4,7 @@ const allPackageNames = packages
   .filter((pkg) => pkg.publish)
   .map((pkg) => pkg.name);
 
-function makeSubPackageReleaseConfig(packageName) {
+export const makeSubPackageReleaseConfig = (packageName) => {
   const otherPackageNames = allPackageNames.filter(
     (pkg) => pkg !== packageName,
   );
@@ -21,7 +21,7 @@ function makeSubPackageReleaseConfig(packageName) {
     tagFormat: `${packageName}-v\${version}`,
     plugins: [
       [
-        require.resolve('@semantic-release/commit-analyzer'),
+        '@semantic-release/commit-analyzer',
         {
           preset: 'conventionalcommits',
           releaseRules: [
@@ -48,7 +48,7 @@ function makeSubPackageReleaseConfig(packageName) {
         },
       ],
       [
-        require.resolve('@semantic-release/release-notes-generator'),
+        '@semantic-release/release-notes-generator',
         {
           changelogFile: 'CHANGELOG.md',
           preset: 'conventionalcommits',
@@ -85,8 +85,8 @@ function makeSubPackageReleaseConfig(packageName) {
           },
         },
       ],
-      require.resolve('@jcoreio/semantic-release-npm'),
-      require.resolve('@semantic-release/github'),
+      '@jcoreio/semantic-release-npm',
+      '@semantic-release/github',
     ],
     // plugins: [
     //   '@semantic-release/commit-analyzer',
@@ -128,6 +128,4 @@ function makeSubPackageReleaseConfig(packageName) {
     //   ],
     // ],
   };
-}
-
-module.exports = makeSubPackageReleaseConfig;
+};
