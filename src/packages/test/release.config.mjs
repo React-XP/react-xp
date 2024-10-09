@@ -1,3 +1,3 @@
 import { makeSubPackageReleaseConfig } from '@react-xp/release-config';
 
-export default makeSubPackageReleaseConfig('<package-name>');
+export default makeSubPackageReleaseConfig('test');
