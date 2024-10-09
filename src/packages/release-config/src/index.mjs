@@ -94,12 +94,12 @@ export const makeSubPackageReleaseConfig = (packageName) => {
         },
       ],
       // '@semantic-release/github',
-      [
-        '@semantic-release/github',
-        {
-          assets: [{ path: 'dist/**' }],
-        },
-      ],
+      // [
+      //   '@semantic-release/github',
+      //   {
+      //     assets: [{ path: 'dist/**' }],
+      //   },
+      // ],
     ],
     // plugins: [
     //   '@semantic-release/commit-analyzer',
