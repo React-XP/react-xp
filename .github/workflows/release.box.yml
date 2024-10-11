@@ -1,4 +1,4 @@
-name: Pre-release and release of package button
+name: Pre-release and release of package box
 on:
   workflow_dispatch:
   push:
@@ -6,13 +6,13 @@ on:
       - develop
       - main
     paths:
-      - 'src/packages/button/**'
+      - 'src/packages/box/**'
 jobs:
   release:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./src/packages/button
+        working-directory: ./src/packages/box
     strategy:
       matrix:
         node-version: [20]
