@@ -17,7 +17,8 @@
     "@radix-ui/react-slot": "^1.1.0"
   },
   "peerDependencies": {
-    "react": "^18.0.0"
+    "@react-xp/theme": "*",
+    "react": "^18.3.1"
   },
   "devDependencies": {
     "@glzr/semantic-release-npm": "^1.5.0",
