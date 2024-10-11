@@ -1,14 +1,18 @@
-name: Release packages
+name: Pre-release and release of package core
 on:
   workflow_dispatch:
   push:
     branches:
+      - develop
       - main
     paths:
-      - 'src/packages/**'
+      - 'src/packages/core/**'
 jobs:
   release:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./src/packages/core
     strategy:
       matrix:
         node-version: [20]
