@@ -1,23 +1,25 @@
 {
-  "name": "@react-xp/button",
-  "description": "This is a React Experience button package",
+  "name": "@react-xp/toast",
+  "description": "This is a React Experience toast package",
   "version": "0.0.0",
   "publishConfig": {
     "access": "public"
   },
   "files": ["dist/"],
   "scripts": {
-    "build-clean": "rimraf dist && tsc --project tsconfig.build.json",
-    "build": "tsc --project tsconfig.build.json",
+    "build-clean": "rimraf dist && pnpm run build",
+    "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "release": "semantic-release"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.1.0"
+    "@radix-ui/react-toast": "^1.2.2"
   },
   "peerDependencies": {
     "@react-xp/theme": "*",
+    "lucide-react": "^0.451.0",
     "react": "^18.3.1"
   },
   "devDependencies": {
@@ -36,15 +38,16 @@
     "@types/react": "^18.3.11",
     "conventional-changelog-conventionalcommits": "^8.0.0",
     "copyfiles": "^2.4.1",
+    "lucide-react": "^0.451.0",
     "nodemon": "^3.1.7",
     "react": "^18.3.1",
     "rimraf": "^6.0.1",
     "semantic-release": "^24.1.2",
     "semantic-release-monorepo": "^8.0.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.2"
   },
   "overrides": {
     "conventional-changelog-conventionalcommits": ">= 8.0.0"
   },
-  "keywords": ["react", "experience", "button"]
+  "keywords": ["react", "experience", "toast"]
 }

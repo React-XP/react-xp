@@ -31,7 +31,7 @@
     "release": "pnpm --workspace-concurrency=1 --filter \"./src/packages/**\" run release",
     "biome:format": "biome format --write src/**/*.{js,ts,tsx}",
     "biome:lint": "biome lint --apply src/**/*.{js,ts,tsx}",
-    "packages:new": "node --loader ts-node/esm ./scripts/packages-new.ts",
+    "new:package": "node --loader ts-node/esm ./scripts/new-package.ts",
     "t": "node --loader ts-node/esm ./scripts/utils.ts"
   },
   "devDependencies": {
