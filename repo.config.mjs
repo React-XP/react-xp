@@ -4,6 +4,8 @@ export const packages = [
   { name: 'card', publish: true },
   { name: 'console', publish: true },
   { name: 'dialog', publish: true },
+  { name: 'divider', publish: true },
+  { name: 'spacer', publish: true },
   { name: 'theme', publish: true },
   { name: 'toast', publish: true },
 ];

@@ -13,7 +13,6 @@
   "dependencies": {
     "@react-xp/core": "workspace:*",
     "@react-xp/theme": "workspace:*",
-    "@react-xp/ui": "workspace:*",
     "lucide-react": "^0.395.0",
     "react": "^18.3.1",
     "react-dnd": "^16.0.1",
