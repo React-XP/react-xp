@@ -1,7 +1,6 @@
 'use client';
-
+import * as ToastPrimitives from '@radix-ui/react-toast';
 import {
-  ToastProvider as ImportedToastProvider,
   Toast,
   ToastClose,
   ToastDescription,
@@ -9,6 +8,8 @@ import {
   ToastViewport,
 } from './toast.component';
 import { useToast } from './toast.hook';
+
+const ImportedToastProvider = ToastPrimitives.ToastProvider;
 
 export function ToastProvider() {
   const { toasts } = useToast();
