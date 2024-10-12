@@ -5,8 +5,6 @@ import { type VariantProps, cn, cva } from '@react-xp/theme/tailwind';
 import { X } from 'lucide-react';
 import * as React from 'react';
 
-const ToastProvider = ToastPrimitives.Provider;
-
 const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>,
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
@@ -117,7 +115,6 @@ type ToastActionElement = React.ReactElement<typeof ToastAction>;
 export {
   type ToastProps,
   type ToastActionElement,
-  ToastProvider,
   ToastViewport,
   Toast,
   ToastTitle,

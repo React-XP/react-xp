@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import React from 'react';
-import { Example } from './toast.component';
+import { Toast } from './toast.component';
 
 //👇 This default export determines where your story goes in the story list
-const meta: Meta<typeof Example> = {
-  component: Example,
+const meta: Meta<typeof Toast> = {
+  component: Toast,
   title: 'Packages/toast',
 };
 
 export default meta;
-type Story = StoryObj<typeof Example>;
+type Story = StoryObj<typeof Toast>;
 
 export const HowToUse: Story = {
-  render: () => <Example />,
+  render: () => <Toast />,
 };
