@@ -11,7 +11,8 @@
     "build": "tsc --project tsconfig.build.json && copyfiles -u 1 src/assets/**/*.css dist",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "release": "semantic-release"
   },
   "peerDependencies": {
     "react": "^18.0.0"
