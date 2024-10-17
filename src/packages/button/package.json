@@ -11,7 +11,8 @@
     "build": "tsc --project tsconfig.build.json",
     "check": "biome check --write",
     "dev": "nodemon --watch src --exec 'pnpm run build'",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "release": "semantic-release"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0"
