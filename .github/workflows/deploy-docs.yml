@@ -38,7 +38,7 @@ jobs:
         run: pnpm run build
 
       - name: Deploy docs
-        uses: crazy-max/ghaction-github-pages@v1
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_brach: gh-pages
           build_dir: src/apps/docs/storybook-static
