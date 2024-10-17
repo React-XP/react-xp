@@ -13,5 +13,13 @@ export default meta;
 type Story = StoryObj<typeof Spacer>;
 
 export const HowToUse: Story = {
-  render: () => <Spacer size={1} />,
+  render: () => (
+    <>
+      <div>Block 1</div>
+      <div style={{ border: '1px solid red' }}>
+        <Spacer size={1} />
+      </div>
+      <div>Block 2</div>
+    </>
+  ),
 };

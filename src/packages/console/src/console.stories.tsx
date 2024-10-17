@@ -166,7 +166,7 @@ const Console = () => {
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof ConsoleProvider> = {
   component: ConsoleProvider,
-  title: 'Packages/Console',
+  title: 'Packages/console',
 };
 
 export default meta;

@@ -13,5 +13,5 @@ export default meta;
 type Story = StoryObj<typeof Card>;
 
 export const HowToUse: Story = {
-  render: () => <Card />,
+  render: () => <Card>This is a "card" component example</Card>,
 };

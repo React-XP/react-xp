@@ -11,7 +11,9 @@ import { useToast } from './toast.hook';
 
 const ImportedToastProvider = ToastPrimitives.ToastProvider;
 
-export function ToastProvider() {
+type ToastProviderProps = React.PropsWithChildren;
+
+export function ToastProvider({ children }: ToastProviderProps) {
   const { toasts } = useToast();
 
   return (
@@ -31,6 +33,7 @@ export function ToastProvider() {
         );
       })}
       <ToastViewport />
+      {children}
     </ImportedToastProvider>
   );
 }
