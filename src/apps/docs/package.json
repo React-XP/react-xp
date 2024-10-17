@@ -9,10 +9,16 @@
     "build": "storybook build"
   },
   "dependencies": {
+    "@react-xp/box": "workspace:*",
     "@react-xp/button": "workspace:*",
+    "@react-xp/card": "workspace:*",
     "@react-xp/console": "workspace:*",
     "@react-xp/core": "workspace:*",
+    "@react-xp/dialog": "workspace:*",
+    "@react-xp/divider": "workspace:*",
+    "@react-xp/spacer": "workspace:*",
     "@react-xp/theme": "workspace:*",
+    "@react-xp/toast": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
