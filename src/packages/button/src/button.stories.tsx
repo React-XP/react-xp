@@ -7,7 +7,7 @@ import { Button } from './button.component';
 //👇 This default export determines where your story goes in the story list
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: 'Packages/Button',
+  title: 'Packages/button',
 };
 
 export default meta;

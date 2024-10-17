@@ -13,5 +13,5 @@ export default meta;
 type Story = StoryObj<typeof Box>;
 
 export const HowToUse: Story = {
-  render: () => <Box />,
+  render: () => <Box>This is a "box" component example</Box>,
 };
