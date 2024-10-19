@@ -1,0 +1,3 @@
+import{j as a}from"./jsx-runtime-Nms4Y4qS.js";import{c as i}from"./tailwind.config-BDswyqrw.js";import"./index-BwDkhjyp.js";import"./_commonjsHelpers-BosuxZz1.js";const r=()=>a.jsx("hr",{className:i("my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10")});r.__docgenInfo={description:"",methods:[],displayName:"Divider"};const p={component:r,title:"Packages/divider"},e={render:()=>a.jsx(r,{})};var o,s,t;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: () => <Divider />
+}`,...(t=(s=e.parameters)==null?void 0:s.docs)==null?void 0:t.source}}};const u=["HowToUse"];export{e as HowToUse,u as __namedExportsOrder,p as default};
