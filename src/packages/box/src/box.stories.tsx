@@ -12,6 +12,6 @@ const meta: Meta<typeof Box> = {
 export default meta;
 type Story = StoryObj<typeof Box>;
 
-export const HowToUse: Story = {
+export const Example: Story = {
   render: () => <Box>This is a "box" component example</Box>,
 };

@@ -12,7 +12,7 @@ const meta: Meta<typeof Spacer> = {
 export default meta;
 type Story = StoryObj<typeof Spacer>;
 
-export const HowToUse: Story = {
+export const Example: Story = {
   render: () => (
     <>
       <div>Block 1</div>

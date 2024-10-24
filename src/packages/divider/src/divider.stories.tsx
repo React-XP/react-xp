@@ -12,6 +12,6 @@ const meta: Meta<typeof Divider> = {
 export default meta;
 type Story = StoryObj<typeof Divider>;
 
-export const HowToUse: Story = {
+export const Example: Story = {
   render: () => <Divider />,
 };

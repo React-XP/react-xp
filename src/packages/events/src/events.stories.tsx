@@ -80,7 +80,7 @@ const Component = () => {
   return (
     <EventsProvider
       onEvent={(event) => {
-        alert(`new event ${JSON.stringify(event)}`);
+        console.log(`new event ${JSON.stringify(event)}`);
       }}
     >
       This is a {'events'} example
@@ -107,6 +107,6 @@ const meta: Meta<typeof EventsProvider> = {
 export default meta;
 type Story = StoryObj<typeof EventsProvider>;
 
-export const HowToUse: Story = {
+export const Example: Story = {
   render: () => <Component />,
 };

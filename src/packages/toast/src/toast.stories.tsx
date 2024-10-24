@@ -53,7 +53,7 @@ const meta: Meta<typeof ToastProvider> = {
 export default meta;
 type Story = StoryObj<typeof ToastProvider>;
 
-export const HowToUse: Story = {
+export const Example: Story = {
   render: () => (
     <ToastProvider>
       <HowToUseToast />

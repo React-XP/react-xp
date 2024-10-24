@@ -6,6 +6,7 @@ export const packages = [
   { name: 'dialog', publish: true },
   { name: 'divider', publish: true },
   { name: 'events', publish: true },
+  { name: 'input', publish: true },
   { name: 'spacer', publish: true },
   { name: 'theme', publish: true },
   { name: 'toast', publish: true },

@@ -12,7 +12,7 @@ const meta: Meta<typeof Dialog> = {
 export default meta;
 type Story = StoryObj<typeof Dialog>;
 
-export const HowToUse: Story = {
+export const Example: Story = {
   render: () => (
     <Dialog defaultOpen>This is a "dialog" component example</Dialog>
   ),
